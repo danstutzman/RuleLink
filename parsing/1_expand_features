@@ -1,0 +1,3 @@
+#!/bin/sh
+cat english.dcg | ruby scripts/expander.rb | ruby scripts/cull_descendantless.rb > temp.e2s/english.expanded.dcg
+cat spanish.dcg | ruby scripts/expander.rb | ruby scripts/cull_descendantless.rb > temp.s2e/spanish.expanded.dcg

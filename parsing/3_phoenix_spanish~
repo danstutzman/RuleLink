@@ -1,0 +1,37 @@
+#!/bin/sh
+cd temp.s2e
+
+cat > config <<EOF
+verbose:1
+extract:0
+dir: .
+grammar: spanish.net
+PROFILE:0
+IGNORE_OOV:0
+EOF
+
+cat > frames <<EOF
+# Only one frame makes it a standard CFG parser
+    FRAME: SingleFrame
+    NETS:
+        [START]
+;
+EOF
+
+cat spanish.gra | ../Phoenix/Scripts/mk_nets.perl > nets
+
+#ln -s ../spanish.gra spanish.gra
+../Phoenix/ParserLib/compile_grammar -f spanish > compilation.log #2>&1 > /dev/null
+#cat compilation.log
+rm compilation.log
+
+cat ../spanish.curriculum | while read line
+do
+  OUTPUT=`echo $line | sed 's/?/qmark/g' | sed 's/,/comma/g' | sed 's/t-shirt/t_shirt/g' | sed 's/!/bang/g' | sed 's/^ *\(.*\)$/" \1 "/' | ../Phoenix/ParserLib/parse_text -config config 2>&1 | grep "No parse"`
+  if [ "$OUTPUT" != "" ]; then
+    echo "$OUTPUT: $line"
+  fi
+done #| less
+
+#rm config frames spanish.net nets base.dic
+#rm spanish.gra

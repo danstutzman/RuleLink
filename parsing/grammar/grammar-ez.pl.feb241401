@@ -1,0 +1,161 @@
+﻿start(G,N) --> [''], start(G,N).
+start(G,N) --> interj, stop.
+start(G,N) --> ['¡'], interj, ['!'].
+start(G,N) --> np(G,N).
+start(G,N) --> s(G,N).
+start(G,N) --> interj, stop, s(G,N).
+start(G,N) --> s(G,N), s(G,N).
+start(G,N) --> adj(G,N).
+
+s(G,N) --> np(G,N), vp(G,N), stop.
+s(G,N) --> vp(G,N), stop.
+s(G,s) --> ['¿', 'qué', 'es', 'esto', '?'].
+s(G,N) --> ['¿'], vp(G,N), np(G,N), ['?'].
+s(G,N) --> ['¿'], np(G,N), vp(G,N), ['?'].
+
+np(G,N) --> d(G,N), n(G,N,c).
+np(G,s) --> n(G,s,uc).
+np(G,s) --> d(G,s), n(G,s,uc).
+np(G,p) --> n(G,p,c).
+np(G,p) --> d(G,p), n(G,p,c).
+np(m,s) --> ['él'].
+np(f,s) --> ['ella'].
+np(m,p) --> ['ellos'].
+np(f,p) --> ['ellas'].
+np(m,p) --> np(m,s), ['y'], np(m,s).
+np(m,p) --> np(m,s), ['y'], np(f,s).
+np(m,p) --> np(f,s), ['y'], np(m,s).
+np(f,p) --> np(f,s), ['y'], np(f,s).
+
+interj --> ['hola'].
+interj --> ['adiós'].
+interj --> ['sí'].
+interj --> ['no'].
+
+stop --> ['.'].
+
+d(m,s) --> ['un'].
+d(m,s) --> ['el'].
+d(f,s) --> ['una'].
+d(f,s) --> ['la'].
+d(m,p) --> ['los'].
+d(f,p) --> ['las'].
+
+n(m,s,c) --> ['niño'].
+n(m,s,c) --> ['hombre'].
+n(m,s,c) --> ['sándwich'].
+n(m,s,c) --> ['huevo'].
+n(m,s,c) --> ['perro'].
+n(m,s,c) --> ['gato'].
+n(m,s,c) --> ['caballo'].
+n(m,s,c) --> ['carro'].
+n(m,s,c) --> ['periódico'].
+n(m,s,c) --> ['libro'].
+n(m,s,c) --> ['pez'].
+n(m,s,c) --> ['bolígrafo'].
+n(m,s,c) --> ['adulto'].
+n(m,s,c) --> ['pasto'].
+n(m,s,c) --> ['cielo'].
+n(m,s,c) --> ['sol'].
+n(m,s,c) --> ['maestro'].
+n(m,s,c) --> ['alumno'].
+n(m,s,c) --> ['policía'].
+n(m,s,c) --> ['médico'].
+n(f,s,c) --> ['niña'].
+n(f,s,c) --> ['mujer'].
+n(f,s,c) --> ['manzana'].
+n(f,s,c) --> ['bicicleta'].
+n(f,s,c) --> ['pelota'].
+n(f,s,c) --> ['luna'].
+n(f,s,c) --> ['flor'].
+n(f,s,c) --> ['doctora'].
+n(f,s,c) --> ['alumna'].
+n(f,s,c) --> ['maestra'].
+n(m,p,c) --> ['niños'].
+n(m,p,c) --> ['hombres'].
+n(m,p,c) --> ['huevos'].
+n(m,p,c) --> ['sándwiches'].
+n(m,p,c) --> ['libros'].
+n(m,p,c) --> ['bolígrafos'].
+n(m,p,c) --> ['adultos'].
+n(m,p,c) --> ['carros'].
+n(m,p,c) --> ['gatos'].
+n(m,p,c) --> ['peces'].
+n(m,p,c) --> ['policías'].
+n(m,p,c) --> ['alumnos'].
+n(f,p,c) --> ['niñas'].
+n(f,p,c) --> ['mujeres'].
+n(f,p,c) --> ['manzanas'].
+n(f,p,c) --> ['bicicletas'].
+n(f,p,c) --> ['pelotas'].
+n(f,p,c) --> ['flores'].
+n(f,p,c) --> ['alumnas'].
+
+n(m,s,uc) --> ['pan'].
+n(m,s,uc) --> ['café'].
+n(m,s,uc) --> ['arroz'].
+n(m,s,uc) --> ['agua'].
+n(f,s,uc) --> ['leche'].
+
+vp(G,N) --> v(N).
+vp(G,N) --> ['no'], v(N).
+vp(G,N) --> v(N), np(G2,N2).
+vp(G,N) --> ['no'], v(N), np(G2,N2).
+vp(G,N) --> cop(G,N), np(G,N).
+vp(G,N) --> cop(G,N), adj(G,N).
+vp(G,N) --> cop(G,N), n(G,N,c).
+
+cop(G,s) --> ['es'].
+cop(G,p) --> ['son'].
+
+v(s) --> ['come'].
+v(s) --> ['bebe'].
+v(s) --> ['corre'].
+v(s) --> ['lee'].
+v(s) --> ['cocina'].
+v(s) --> ['nada'].
+v(s) --> ['escribe'].
+v(s) --> ['maneja'].
+v(s) --> ['camina'].
+v(s) --> ['tiene'].
+v(s) --> ['duerme'].
+v(p) --> ['comen'].
+v(p) --> ['beben'].
+v(p) --> ['corren'].
+v(p) --> ['leen'].
+v(p) --> ['cocinan'].
+v(p) --> ['nadan'].
+v(p) --> ['escriben'].
+v(p) --> ['tienen'].
+v(p) --> ['duermen'].
+v(p) --> ['caminan'].
+
+adj(G,N) --> color(G,N).
+adj(G,N) --> color(G,N), ['y'], color(G,N).
+adj(m,s) --> ['pequeño'].
+adj(G,s) --> ['grande'].
+adj(f,s) --> ['pequeña'].
+adj(m,p) --> ['pequeños'].
+adj(G,p) --> ['grandes'].
+adj(f,p) --> ['pequeñas'].
+
+color(m,s) --> ['blanco'].
+color(m,s) --> ['negro'].
+color(m,s) --> ['rojo'].
+color(m,s) --> ['amarillo'].
+color(G,s) --> ['azul'].
+color(G,s) --> ['verde'].
+color(f,s) --> ['blanca'].
+color(f,s) --> ['negra'].
+color(f,s) --> ['roja'].
+color(f,s) --> ['amarilla'].
+color(m,p) --> ['blancos'].
+color(m,p) --> ['negros'].
+color(m,p) --> ['rojos'].
+color(m,p) --> ['amarillos'].
+color(G,p) --> ['azules'].
+color(G,p) --> ['verdes'].
+color(f,p) --> ['blancas'].
+color(f,p) --> ['negras'].
+color(f,p) --> ['rojas'].
+color(f,p) --> ['amarillas'].

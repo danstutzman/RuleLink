@@ -1,0 +1,275 @@
+﻿start --> ['"'], start2, ['"'].
+
+start2 --> interj, ['.'].
+start2 --> ['¡'], interj, ['!'].
+start2 --> np(G,N,P).
+start2 --> s.
+start2 --> interj, ['.'], s.
+start2 --> s, s.
+start2 --> adj(G,N).
+start2 --> digit.
+start2 --> digit, comma_digits.
+
+comma_digits --> [','], digit.
+comma_digits --> [','], digit, comma_digits.
+
+s --> np(G,N,P), vp(G,N,P,T), ['.'].
+s --> vp(G,N,P,T), ['.'].
+s --> ['¿', 'qué', 'es'], esto, ['?'].
+s --> ['¿'], vp(G,N,P,T), np(G,N,P), ['?'].
+s --> ['¿'], np(G,N,P), vp(G,N,P,T), ['?'].
+s --> ['¿', 'qué'], vp(G,N,P,i), np(G,N,P), ['?'].
+s --> ['hay'], np(G,N,P), ['.'].
+s --> ['¿'], cuantos(G), n(G,p,c), ['hay', '?'].
+s --> ['¿'], cuantos(G), n(G,p,c), vp(G2,N,P,i), ['?'].
+s --> ['¿'], cuantos(G), n(G,p,c), vp(G2,N,P,T), ['?'].
+s --> ['¿', 'quién'], vp(G,N,P,T), ['?'].
+
+cuantos(m) --> ['cuántos'].
+cuantos(f) --> ['cuántas'].
+
+np(G,N,3) --> d(G,N), n(G,N,c).
+np(G,N,3) --> n(G,N,uc).
+np(G,N,3) --> d(G,N), n(G,N,uc).
+np(G,p,3) --> n(G,p,c).
+%np(G,p,3) --> d(G,p), n(G,p,c). (redundant)
+np(m,s,3) --> ['él'].
+np(f,s,3) --> ['ella'].
+np(m,p,3) --> ['ellos'].
+np(f,p,3) --> ['ellas'].
+np(m,p,3) --> np(m,s,3), ['y'], np(m,s,3).
+np(m,p,3) --> np(m,s,3), ['y'], np(f,s,3).
+np(m,p,3) --> np(f,s,3), ['y'], np(m,s,3).
+np(f,p,3) --> np(f,s,3), ['y'], np(f,s,3).
+np(G,s,1) --> ['yo'].
+np(G,N,3) --> d(G,N), n(G,N,c), adj(G,N).
+np(G,p,3) --> n(G,p,c), adj(G,p).
+np(G,s,3) --> ['usted'].
+np(m,p,1) --> ['nosotros'].
+np(f,p,1) --> ['nosotras'].
+np(G,p,3) --> digit, n(G,p,c).
+np(G,p,3) --> ['ustedes'].
+np_bare --> n(G,s,c).
+
+interj --> ['hola'].
+interj --> ['adiós'].
+interj --> ['sí'].
+interj --> ['no'].
+
+d(m,s) --> ['un'].
+d(m,s) --> ['el'].
+d(f,s) --> ['una'].
+d(f,s) --> ['la'].
+d(m,p) --> ['los'].
+d(f,p) --> ['las'].
+
+n(m,s,c) --> ['niño'].
+n(m,s,c) --> ['hombre'].
+n(m,s,c) --> ['sándwich'].
+n(m,s,c) --> ['huevo'].
+n(m,s,c) --> ['perro'].
+n(m,s,c) --> ['gato'].
+n(m,s,c) --> ['caballo'].
+n(m,s,c) --> ['carro'].
+n(m,s,c) --> ['periódico'].
+n(m,s,c) --> ['libro'].
+n(m,s,c) --> ['pez'].
+n(m,s,c) --> ['bolígrafo'].
+n(m,s,c) --> ['adulto'].
+n(m,s,c) --> ['pasto'].
+n(m,s,c) --> ['cielo'].
+n(m,s,c) --> ['sol'].
+n(m,s,c) --> ['maestro'].
+n(m,s,c) --> ['alumno'].
+n(m,s,c) --> ['policía'].
+n(m,s,c) --> ['médico'].
+n(m,s,c) --> ['celular'].
+n(m,s,c) --> ['teléfono'].
+n(m,s,c) --> ['plato'].
+n(m,s,c) --> ['tazón'].
+n(m,s,c) --> ['abrigo'].
+n(m,s,c) --> ['vestido'].
+n(m,s,c) --> ['zapato'].
+n(m,s,c) --> ['sombrero'].
+n(m,s,c) --> ['árbol'].
+n(f,s,c) --> ['niña'].
+n(f,s,c) --> ['mujer'].
+n(f,s,c) --> ['manzana'].
+n(f,s,c) --> ['bicicleta'].
+n(f,s,c) --> ['pelota'].
+n(f,s,c) --> ['luna'].
+n(f,s,c) --> ['flor'].
+n(f,s,c) --> ['doctora'].
+n(f,s,c) --> ['alumna'].
+n(f,s,c) --> ['maestra'].
+n(f,s,c) --> ['cama'].
+n(f,s,c) --> ['taza'].
+n(f,s,c) --> ['silla'].
+n(f,s,c) --> ['mesa'].
+n(f,s,c) --> ['llave'].
+n(f,s,c) --> ['camisa'].
+n(f,s,c) --> ['camiseta'].
+n(f,s,c) --> ['falda'].
+n(m,p,c) --> ['niños'].
+n(m,p,c) --> ['hombres'].
+n(m,p,c) --> ['huevos'].
+n(m,p,c) --> ['sándwiches'].
+n(m,p,c) --> ['libros'].
+n(m,p,c) --> ['bolígrafos'].
+n(m,p,c) --> ['adultos'].
+n(m,p,c) --> ['carros'].
+n(m,p,c) --> ['gatos'].
+n(m,p,c) --> ['peces'].
+n(m,p,c) --> ['policías'].
+n(m,p,c) --> ['alumnos'].
+n(m,p,c) --> ['maestros'].
+n(m,p,c) --> ['médicos'].
+n(m,p,c) --> ['caballos'].
+n(m,p,c) --> ['perros'].
+n(m,p,c) --> ['periódicos'].
+n(m,p,c) --> ['celulares'].
+n(m,p,c) --> ['teléfonos'].
+n(m,p,c) --> ['platos'].
+n(m,p,c) --> ['tazones'].
+n(m,p,c) --> ['abrigos'].
+n(m,p,c) --> ['vestidos'].
+n(m,p,c) --> ['zapatos'].
+n(m,p,c) --> ['sombreros'].
+n(m,p,c) --> ['árboles'].
+n(f,p,c) --> ['niñas'].
+n(f,p,c) --> ['mujeres'].
+n(f,p,c) --> ['manzanas'].
+n(f,p,c) --> ['bicicletas'].
+n(f,p,c) --> ['pelotas'].
+n(f,p,c) --> ['flores'].
+n(f,p,c) --> ['alumnas'].
+n(f,p,c) --> ['camas'].
+n(f,p,c) --> ['tazas'].
+n(f,p,c) --> ['sillas'].
+n(f,p,c) --> ['mesas'].
+n(f,p,c) --> ['llaves'].
+n(f,p,c) --> ['camisas'].
+n(f,p,c) --> ['camisetas'].
+n(f,p,c) --> ['faldas'].
+
+n(m,s,uc) --> ['pan'].
+n(m,s,uc) --> ['café'].
+n(m,s,uc) --> ['arroz'].
+n(m,s,uc) --> ['agua'].
+n(m,p,uc) --> ['pantalones'].
+n(f,s,uc) --> ['leche'].
+
+vp(G,N,P,i) --> v(N,P).
+vp(G,N,P,i) --> ['no'], v(N,P).
+vp(G,N,P,t) --> v(N,P), np(G2,N2,P3).
+vp(G,N,P,t) --> ['no'], v(N,P), np(G2,N2,P3).
+vp(G,N,P,t) --> cop(G,N,P), np(G,N,3).
+vp(G,N,P,t) --> cop(G,N,P), adj(G,N).
+vp(G,N,P,t) --> cop(G,N,P), np_bare.
+vp(G,N,P,t) --> ['no'], cop(G,N,P), np(G,N,3).
+vp(G,N,P,t) --> ['no'], cop(G,N,P), adj(G,N).
+vp(G,N,P,t) --> ['no'], cop(G,N,P), np_bare.
+vp(G,N,P,i) --> estar(N,P), prpart.
+vp(G,N,P,i) --> ['no'], estar(N,P), prpart.
+vp(G,N,P,t) --> estar(N,P), prpart, np(G2,N2,P3).
+vp(G,N,P,t) --> ['no'], estar(N,P), prpart, np(G2,N2,P3).
+vp(G,N,P,t) --> llevar(N,P), np_bare.
+vp(G,N,P,t) --> ['no'], llevar(N,P), np_bare.
+vp(G,N,P,t) --> llevar(N,P), np(G2,N2,3).
+vp(G,N,P,t) --> ['no'], llevar(N,P), np(G2,N2,3).
+
+estar(s,3) --> ['está'].
+estar(p,3) --> ['están'].
+estar(s,1) --> ['estoy'].
+estar(p,1) --> ['estamos'].
+
+llevar(s,3) --> ['lleva'].
+llevar(p,3) --> ['llevan'].
+llevar(s,1) --> ['llevo'].
+llevar(p,1) --> ['llevamos'].
+
+prpart --> ['haciendo'].
+prpart --> ['comiendo'].
+prpart --> ['caminando'].
+prpart --> ['corriendo'].
+prpart --> ['durmiendo'].
+prpart --> ['cocinando'].
+prpart --> ['leyendo'].
+prpart --> ['escribiendo'].
+prpart --> ['manejando'].
+prpart --> ['nadando'].
+prpart --> ['bebiendo'].
+
+cop(G,s,3) --> ['es'].
+cop(G,p,3) --> ['son'].
+cop(G,s,1) --> ['soy'].
+cop(G,p,1) --> ['somos'].
+
+v(s,3) --> ['come'].
+v(s,3) --> ['bebe'].
+v(s,3) --> ['corre'].
+v(s,3) --> ['lee'].
+v(s,3) --> ['cocina'].
+v(s,3) --> ['nada'].
+v(s,3) --> ['escribe'].
+v(s,3) --> ['maneja'].
+v(s,3) --> ['camina'].
+v(s,3) --> ['tiene'].
+v(s,3) --> ['duerme'].
+v(p,3) --> ['comen'].
+v(p,3) --> ['beben'].
+v(p,3) --> ['corren'].
+v(p,3) --> ['leen'].
+v(p,3) --> ['cocinan'].
+v(p,3) --> ['nadan'].
+v(p,3) --> ['escriben'].
+v(p,3) --> ['tienen'].
+v(p,3) --> ['duermen'].
+v(p,3) --> ['caminan'].
+v(s,3) --> ['compra'].
+v(s,1) --> ['tengo'].
+v(s,1) --> ['bebo'].
+v(s,1) --> ['como'].
+v(s,1) --> ['compro'].
+v(p,1) --> ['tenemos'].
+
+adj(G,N) --> color(G,N).
+adj(G,N) --> color(G,N), ['y'], color(G,N).
+adj(m,s) --> ['pequeño'].
+adj(G,s) --> ['grande'].
+adj(f,s) --> ['pequeña'].
+adj(m,p) --> ['pequeños'].
+adj(G,p) --> ['grandes'].
+adj(f,p) --> ['pequeñas'].
+
+color(m,s) --> ['blanco'].
+color(m,s) --> ['negro'].
+color(m,s) --> ['rojo'].
+color(m,s) --> ['amarillo'].
+color(G,s) --> ['azul'].
+color(G,s) --> ['verde'].
+color(f,s) --> ['blanca'].
+color(f,s) --> ['negra'].
+color(f,s) --> ['roja'].
+color(f,s) --> ['amarilla'].
+color(m,p) --> ['blancos'].
+color(m,p) --> ['negros'].
+color(m,p) --> ['rojos'].
+color(m,p) --> ['amarillos'].
+color(G,p) --> ['azules'].
+color(G,p) --> ['verdes'].
+color(f,p) --> ['blancas'].
+color(f,p) --> ['negras'].
+color(f,p) --> ['rojas'].
+color(f,p) --> ['amarillas'].
+
+digit --> ['uno'].
+digit --> ['dos'].
+digit --> ['tres'].
+digit --> ['cuatro'].
+digit --> ['cinco'].
+digit --> ['seis'].
+
+% Added for translation
+s --> ['¿'], cuantos(G), n(G,p,c), vp(G2,N,P,i), np(G2,N,P), ['?'].
+esto --> ['esto'].

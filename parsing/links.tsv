@@ -1,0 +1,291 @@
+English	digit(s) --> ['one'].	Spanish	d(f,s) --> ['una'].	{}	0
+English	digit(s) --> ['one'].	Spanish	d(m,s) --> ['un'].	{}	0
+English	np(N,3) --> digit(N), n(N,C).	Spanish	np(G,N,3) --> d(G,N), n(G,N,c).	{1=>1, 2=>2}	0
+English	np(s,3) --> ['it'].	Spanish	np(f,s,3) --> ['ella'].	{}	1
+English	np(s,3) --> ['it'].	Spanish	np(m,s,3) --> ['él'].	{}	1
+from_language_name	from_rule_text	to_language_name	to_rule_text	argument_mapping	bidirectional
+Spanish	adj(f,p) --> ['pequeñas'].	English	adj --> ['small'].	{}	1
+Spanish	adj(f,s) --> ['pequeña'].	English	adj --> ['small'].	{}	1
+Spanish	adj(G,N) --> color(G,N).	English	adj --> color.	{1=>1}	1
+Spanish	adj(G,N) --> color(G,N), ['y'], color(G,N).	English	adj --> color, ['and'], color.	{1=>1, 2=>2}	1
+Spanish	adj(G,p) --> ['grandes'].	English	adj --> ['big'].	{}	1
+Spanish	adj(G,s) --> ['grande'].	English	adj --> ['big'].	{}	1
+Spanish	adj(m,p) --> ['pequeños'].	English	adj --> ['small'].	{}	1
+Spanish	adj(m,s) --> ['pequeño'].	English	adj --> ['small'].	{}	1
+Spanish	color(f,p) --> ['amarillas'].	English	color --> ['yellow'].	{}	1
+Spanish	color(f,p) --> ['blancas'].	English	color --> ['white'].	{}	1
+Spanish	color(f,p) --> ['negras'].	English	color --> ['black'].	{}	1
+Spanish	color(f,p) --> ['rojas'].	English	color --> ['red'].	{}	1
+Spanish	color(f,s) --> ['amarilla'].	English	color --> ['yellow'].	{}	1
+Spanish	color(f,s) --> ['blanca'].	English	color --> ['white'].	{}	1
+Spanish	color(f,s) --> ['negra'].	English	color --> ['black'].	{}	1
+Spanish	color(f,s) --> ['roja'].	English	color --> ['red'].	{}	1
+Spanish	color(G,p) --> ['azules'].	English	color --> ['blue'].	{}	1
+Spanish	color(G,p) --> ['verdes'].	English	color --> ['green'].	{}	1
+Spanish	color(G,s) --> ['azul'].	English	color --> ['blue'].	{}	1
+Spanish	color(G,s) --> ['verde'].	English	color --> ['green'].	{}	1
+Spanish	color(m,p) --> ['amarillos'].	English	color --> ['yellow'].	{}	1
+Spanish	color(m,p) --> ['blancos'].	English	color --> ['white'].	{}	1
+Spanish	color(m,p) --> ['negros'].	English	color --> ['black'].	{}	1
+Spanish	color(m,p) --> ['rojos'].	English	color --> ['red'].	{}	1
+Spanish	color(m,s) --> ['amarillo'].	English	color --> ['yellow'].	{}	1
+Spanish	color(m,s) --> ['blanco'].	English	color --> ['white'].	{}	1
+Spanish	color(m,s) --> ['negro'].	English	color --> ['black'].	{}	1
+Spanish	color(m,s) --> ['rojo'].	English	color --> ['red'].	{}	1
+Spanish	comma_digits --> [','], digit, comma_digits.	English	comma_digit --> [','], digit(N), comma_digit.	{1=>1, 2=>2}	1
+Spanish	comma_digits --> [','], digit.	English	comma_digit --> [','], digit(N).	{1=>1}	1
+Spanish	cop(G,p,1) --> ['somos'].	English	be(p,1,ind) --> ['are'].	{}	1
+Spanish	cop(G,p,3) --> ['son'].	English	be(p,3,ind) --> ['are'].	{}	1
+Spanish	cop(G,s,1) --> ['soy'].	English	be(s,1,ind) --> ['am'].	{}	1
+Spanish	cop(G,s,3) --> ['es'].	English	be(s,3,ind) --> ['is'].	{}	1
+Spanish	d(f,p) --> ['las'].	English	d(N,C) --> ['the'].	{}	1
+Spanish	d(f,s) --> ['la'].	English	d(N,C) --> ['the'].	{}	1
+Spanish	d(f,s) --> ['una'].	English	d(s,ac) --> ['an'].	{}	1
+Spanish	d(f,s) --> ['una'].	English	d(s,nac) --> ['a'].	{}	1
+Spanish	digit --> ['cinco'].	English	digit(p) --> ['five'].	{}	1
+Spanish	digit --> ['cuatro'].	English	digit(p) --> ['four'].	{}	1
+Spanish	digit --> ['dos'].	English	digit(p) --> ['two'].	{}	1
+Spanish	digit --> ['seis'].	English	digit(p) --> ['six'].	{}	1
+Spanish	digit --> ['tres'].	English	digit(p) --> ['three'].	{}	1
+Spanish	digit --> ['uno'].	English	digit(s) --> ['one'].	{}	1
+Spanish	d(m,p) --> ['los'].	English	d(N,C) --> ['the'].	{}	1
+Spanish	d(m,s) --> ['el'].	English	d(N,C) --> ['the'].	{}	1
+Spanish	d(m,s) --> ['un'].	English	d(s,ac) --> ['an'].	{}	1
+Spanish	d(m,s) --> ['un'].	English	d(s,nac) --> ['a'].	{}	1
+Spanish	estar(p,1) --> ['estamos'].	English	be(p,1,ind) --> ['are'].	{}	1
+Spanish	estar(p,3) --> ['están'].	English	be(p,3,ind) --> ['are'].	{}	1
+Spanish	estar(s,1) --> ['estoy'].	English	be(s,1,ind) --> ['am'].	{}	1
+Spanish	estar(s,3) --> ['está'].	English	be(N,2,ind) --> ['are'].	{}	1
+Spanish	estar(s,3) --> ['está'].	English	be(s,3,ind) --> ['is'].	{}	1
+Spanish	esto --> ['esto'].	English	this(p) --> ['these'].	{}	1
+Spanish	esto --> ['esto'].	English	this(s) --> ['this'].	{}	1
+Spanish	interj --> ['adiós'].	English	interj --> ['goodbye'].	{}	1
+Spanish	interj --> ['hola'].	English	interj --> ['hello'].	{}	1
+Spanish	interj --> ['no'].	English	interj --> ['no'].	{}	1
+Spanish	interj --> ['sí'].	English	interj --> ['yes'].	{}	1
+Spanish	llevar(p,1) --> ['llevamos'].	English	prpart --> ['wearing'].	{}	1
+Spanish	llevar(p,3) --> ['llevan'].	English	prpart --> ['wearing'].	{}	1
+Spanish	llevar(s,1) --> ['llevo'].	English	prpart --> ['wearing'].	{}	1
+Spanish	llevar(s,3) --> ['lleva'].	English	prpart --> ['wearing'].	{}	1
+Spanish	n(f,p,c) --> ['alumnas'].	English	n(p,nac) --> ['students'].	{}	1
+Spanish	n(f,p,c) --> ['bicicletas'].	English	n(p,nac) --> ['bicycles'].	{}	1
+Spanish	n(f,p,c) --> ['camas'].	English	n(p,nac) --> ['beds'].	{}	1
+Spanish	n(f,p,c) --> ['camisetas'].	English	n(p,nac) --> ['t-shirts'].	{}	1
+Spanish	n(f,p,c) --> ['flores'].	English	n(p,nac) --> ['flowers'].	{}	1
+Spanish	n(f,p,c) --> ['llaves'].	English	n(p,nac) --> ['keys'].	{}	1
+Spanish	n(f,p,c) --> ['manzanas'].	English	n(p,ac) --> ['apples'].	{}	1
+Spanish	n(f,p,c) --> ['mesas'].	English	n(p,nac) --> ['tables'].	{}	1
+Spanish	n(f,p,c) --> ['mujeres'].	English	n(p,nac) --> ['women'].	{}	1
+Spanish	n(f,p,c) --> ['niñas'].	English	n(p,nac) --> ['girls'].	{}	1
+Spanish	n(f,p,c) --> ['pelotas'].	English	n(p,nac) --> ['balls'].	{}	1
+Spanish	n(f,p,c) --> ['sillas'].	English	n(p,nac) --> ['chairs'].	{}	1
+Spanish	n(f,p,c) --> ['tazas'].	English	n(p,nac) --> ['cups'].	{}	1
+Spanish	n(f,s,c) --> ['alumna'].	English	n(s,nac) --> ['student'].	{}	1
+Spanish	n(f,s,c) --> ['bicicleta'].	English	n(s,nac) --> ['bicycle'].	{}	1
+Spanish	n(f,s,c) --> ['cama'].	English	n(s,nac) --> ['bed'].	{}	1
+Spanish	n(f,s,c) --> ['camisa'].	English	n(s,nac) --> ['shirt'].	{}	1
+Spanish	n(f,s,c) --> ['camiseta'].	English	n(s,nac) --> ['t-shirt'].	{}	1
+Spanish	n(f,s,c) --> ['doctora'].	English	n(s,nac) --> ['doctor'].	{}	1
+Spanish	n(f,s,c) --> ['falda'].	English	n(s,nac) --> ['skirt'].	{}	1
+Spanish	n(f,s,c) --> ['falda'].	English	n(s,nac) --> ['skirt'].	{}	1
+Spanish	n(f,s,c) --> ['flor'].	English	n(s,nac) --> ['flower'].	{}	1
+Spanish	n(f,s,c) --> ['luna'].	English	n(s,nac) --> ['moon'].	{}	1
+Spanish	n(f,s,c) --> ['maestra'].	English	n(s,nac) --> ['teacher'].	{}	1
+Spanish	n(f,s,c) --> ['manzana'].	English	n(s,ac) --> ['apple'].	{}	1
+Spanish	n(f,s,c) --> ['mesa'].	English	n(s,nac) --> ['table'].	{}	1
+Spanish	n(f,s,c) --> ['mujer'].	English	n(s,nac) --> ['woman'].	{}	1
+Spanish	n(f,s,c) --> ['niña'].	English	n(s,nac) --> ['girl'].	{}	1
+Spanish	n(f,s,c) --> ['pelota'].	English	n(s,nac) --> ['ball'].	{}	1
+Spanish	n(f,s,c) --> ['taza'].	English	n(s,nac) --> ['cup'].	{}	1
+Spanish	n(f,s,uc) --> ['leche'].	English	n(s,uc) --> ['milk'].	{}	1
+Spanish	n(m,p,c) --> ['adultos'].	English	n(p,ac) --> ['adults'].	{}	1
+Spanish	n(m,p,c) --> ['alumnos'].	English	n(p,nac) --> ['students'].	{}	1
+Spanish	n(m,p,c) --> ['árboles'].	English	n(p,nac) --> ['trees'].	{}	1
+Spanish	n(m,p,c) --> ['bolígrafos'].	English	n(p,nac) --> ['pens'].	{}	1
+Spanish	n(m,p,c) --> ['caballos'].	English	n(p,nac) --> ['horses'].	{}	1
+Spanish	n(m,p,c) --> ['carros'].	English	n(p,nac) --> ['cars'].	{}	1
+Spanish	n(m,p,c) --> ['celulares'].	English	n(p,nac) --> ['cell', 'phones'].	{}	1
+Spanish	n(m,p,c) --> ['gatos'].	English	n(p,nac) --> ['cats'].	{}	1
+Spanish	n(m,p,c) --> ['hombres'].	English	n(p,nac) --> ['men'].	{}	1
+Spanish	n(m,p,c) --> ['huevos'].	English	n(p,ac) --> ['eggs'].	{}	1
+Spanish	n(m,p,c) --> ['libros'].	English	n(p,nac) --> ['books'].	{}	1
+Spanish	n(m,p,c) --> ['maestros'].	English	n(p,nac) --> ['teachers'].	{}	1
+Spanish	n(m,p,c) --> ['médicos'].	English	n(p,nac) --> ['doctors'].	{}	1
+Spanish	n(m,p,c) --> ['niños'].	English	n(p,nac) --> ['boys'].	{}	1
+Spanish	n(m,p,c) --> ['niños'].	English	n(p,nac) --> ['children'].	{}	1
+Spanish	n(m,p,c) --> ['peces'].	English	n(p,nac) --> ['fish'].	{}	1
+Spanish	n(m,p,c) --> ['periódicos'].	English	n(p,nac) --> ['newspapers'].	{}	1
+Spanish	n(m,p,c) --> ['perros'].	English	n(p,nac) --> ['dogs'].	{}	1
+Spanish	n(m,p,c) --> ['platos'].	English	n(p,nac) --> ['plates'].	{}	1
+Spanish	n(m,p,c) --> ['policías'].	English	n(p,nac) --> ['police', 'officers'].	{}	1
+Spanish	n(m,p,c) --> ['sándwiches'].	English	n(p,nac) --> ['sandwiches'].	{}	1
+Spanish	n(m,p,c) --> ['sombreros'].	English	n(p,nac) --> ['hats'].	{}	1
+Spanish	n(m,p,c) --> ['tazones'].	English	n(p,nac) --> ['bowls'].	{}	1
+Spanish	n(m,p,c) --> ['teléfonos'].	English	n(p,nac) --> ['phones'].	{}	1
+Spanish	n(m,p,c) --> ['zapatos'].	English	n(p,nac) --> ['shoes'].	{}	1
+Spanish	n(m,p,uc) --> ['pantalones'].	English	n(p,uc) --> ['pants'].	{}	1
+Spanish	n(m,s,c) --> ['abrigo'].	English	n(s,nac) --> ['coat'].	{}	1
+Spanish	n(m,s,c) --> ['adulto'].	English	n(s,ac) --> ['adult'].	{}	1
+Spanish	n(m,s,c) --> ['alumno'].	English	n(s,nac) --> ['student'].	{}	1
+Spanish	n(m,s,c) --> ['árbol'].	English	n(s,nac) --> ['tree'].	{}	1
+Spanish	n(m,s,c) --> ['bolígrafo'].	English	n(s,nac) --> ['pen'].	{}	1
+Spanish	n(m,s,c) --> ['caballo'].	English	n(s,nac) --> ['horse'].	{}	1
+Spanish	n(m,s,c) --> ['carro'].	English	n(s,nac) --> ['car'].	{}	1
+Spanish	n(m,s,c) --> ['celular'].	English	n(s,nac) --> ['cell', 'phone'].	{}	1
+Spanish	n(m,s,c) --> ['cielo'].	English	n(s,nac) --> ['sky'].	{}	1
+Spanish	n(m,s,c) --> ['gato'].	English	n(s,nac) --> ['cat'].	{}	1
+Spanish	n(m,s,c) --> ['hombre'].	English	n(s,nac) --> ['man'].	{}	1
+Spanish	n(m,s,c) --> ['huevo'].	English	n(s,ac) --> ['egg'].	{}	1
+Spanish	n(m,s,c) --> ['libro'].	English	n(s,nac) --> ['book'].	{}	1
+Spanish	n(m,s,c) --> ['maestro'].	English	n(s,nac) --> ['teacher'].	{}	1
+Spanish	n(m,s,c) --> ['médico'].	English	n(s,nac) --> ['doctor'].	{}	1
+Spanish	n(m,s,c) --> ['niño'].	English	n(s,nac) --> ['boy'].	{}	1
+Spanish	n(m,s,c) --> ['niño'].	English	n(s,nac) --> ['child'].	{}	1
+Spanish	n(m,s,c) --> ['pasto'].	English	n(s,uc) --> ['grass'].	{}	1
+Spanish	n(m,s,c) --> ['periódico'].	English	n(s,nac) --> ['newspaper'].	{}	1
+Spanish	n(m,s,c) --> ['perro'].	English	n(s,nac) --> ['dog'].	{}	1
+Spanish	n(m,s,c) --> ['pez'].	English	n(s,nac) --> ['fish'].	{}	1
+Spanish	n(m,s,c) --> ['plato'].	English	n(s,nac) --> ['plate'].	{}	1
+Spanish	n(m,s,c) --> ['policía'].	English	n(s,nac) --> ['police', 'officer'].	{}	1
+Spanish	n(m,s,c) --> ['sándwich'].	English	n(s,nac) --> ['sandwich'].	{}	1
+Spanish	n(m,s,c) --> ['sol'].	English	n(s,nac) --> ['sun'].	{}	1
+Spanish	n(m,s,c) --> ['sombrero'].	English	n(s,nac) --> ['hat'].	{}	1
+Spanish	n(m,s,c) --> ['tazón'].	English	n(s,nac) --> ['bowl'].	{}	1
+Spanish	n(m,s,c) --> ['teléfono'].	English	n(s,nac) --> ['phone'].	{}	1
+Spanish	n(m,s,c) --> ['vestido'].	English	n(s,nac) --> ['dress'].	{}	1
+Spanish	n(m,s,uc) --> ['agua'].	English	n(s,uc) --> ['water'].	{}	1
+Spanish	n(m,s,uc) --> ['arroz'].	English	n(s,uc) --> ['rice'].	{}	1
+Spanish	n(m,s,uc) --> ['café'].	English	n(s,uc) --> ['coffee'].	{}	1
+Spanish	n(m,s,uc) --> ['pan'].	English	n(s,uc) --> ['bread'].	{}	1
+Spanish	np_bare --> n(G,s,c).	English	np(N,3) --> d(N,C), n(N,C).	{1=>2}	1
+Spanish	np_bare --> n(G,s,c).	English	np(p,3) --> n(p,C).	{1=>1}	1
+Spanish	np_bare --> n(G,s,c).	English	np(s,3) --> n(s,uc).	{1=>1}	1
+Spanish	np(f,p,1) --> ['nosotras'].	English	np(p,1) --> ['we'].	{}	1
+Spanish	np(f,p,3) --> ['ellas'].	English	np(p,3) --> ['they'].	{}	1
+Spanish	np(f,p,3) --> np(f,s,3), ['y'], np(f,s,3).	English	np(p,3) --> np(s,3), ['and'], np(s,3).	{1=>1, 2=>2}	1
+Spanish	np(f,s,3) --> ['ella'].	English	np(s,3) --> ['she'].	{}	1
+Spanish	np(G,N,3) --> d(G,N), n(G,N,c), adj(G,N).	English	np(s,3) --> d(s,nac), adj, n(s,nac).	{1=>1, 2=>3, 3=>2}	1
+Spanish	np(G,N,3) --> d(G,N), n(G,N,c).	English	np(N,3) --> d(N,C), n(N,C).	{1=>1, 2=>2}	1
+Spanish	np(G,N,3) --> d(G,N), n(G,N,uc).	English	np(N,3) --> d(N,C), n(N,C).	{1=>1, 2=>2}	1
+Spanish	np(G,N,3) --> n(G,N,uc).	English	np(p,3) --> n(p,C).	{1=>1}	1
+Spanish	np(G,N,3) --> n(G,N,uc).	English	np(s,3) --> n(s,uc).	{1=>1}	1
+Spanish	np(G,p,3) --> digit, n(G,p,c).	English	np(N,3) --> digit(N), n(N,C).	{1=>1, 2=>2}	1
+Spanish	np(G,p,3) --> n(G,p,c), adj(G,p).	English	np(p,3) --> adj, n(p,C).	{1=>2, 2=>1}	1
+Spanish	np(G,p,3) --> n(G,p,c).	English	np(p,3) --> n(p,C).	{1=>1}	1
+Spanish	np(G,p,3) --> n(G,p,c).	English	np(p,3) --> n(p,C).	{1=>1}	1
+Spanish	np(G,p,3) --> ['ustedes'].	English	np(N,2) --> ['you'].	{}	1
+Spanish	np(G,s,1) --> ['yo'].	English	np(s,1) --> ['i'].	{}	1
+Spanish	np(G,s,3) --> ['usted'].	English	np(N,2) --> ['you'].	{}	1
+Spanish	np(m,p,1) --> ['nosotros'].	English	np(p,1) --> ['we'].	{}	1
+Spanish	np(m,p,3) --> ['ellos'].	English	np(p,3) --> ['they'].	{}	1
+Spanish	np(m,p,3) --> np(f,s,3), ['y'], np(m,s,3).	English	np(p,3) --> np(s,3), ['and'], np(s,3).	{1=>1, 2=>2}	1
+Spanish	np(m,p,3) --> np(m,s,3), ['y'], np(f,s,3).	English	np(p,3) --> np(s,3), ['and'], np(s,3).	{1=>1, 2=>2}	1
+Spanish	np(m,p,3) --> np(m,s,3), ['y'], np(m,s,3).	English	np(p,3) --> np(s,3), ['and'], np(s,3).	{1=>1, 2=>2}	1
+Spanish	np(m,s,3) --> ['él'].	English	np(s,3) --> ['he'].	{}	1
+Spanish	prpart --> ['bebiendo'].	English	prpart --> ['drinking'].	{}	1
+Spanish	prpart --> ['caminando'].	English	prpart --> ['walking'].	{}	1
+Spanish	prpart --> ['cocinando'].	English	prpart --> ['cooking'].	{}	1
+Spanish	prpart --> ['comiendo'].	English	prpart --> ['eating'].	{}	1
+Spanish	prpart --> ['corriendo'].	English	prpart --> ['running'].	{}	1
+Spanish	prpart --> ['durmiendo'].	English	prpart --> ['sleeping'].	{}	1
+Spanish	prpart --> ['escribiendo'].	English	prpart --> ['writing'].	{}	1
+Spanish	prpart --> ['haciendo'].	English	prpart --> ['doing'].	{}	1
+Spanish	prpart --> ['leyendo'].	English	prpart --> ['reading'].	{}	1
+Spanish	prpart --> ['manejando'].	English	prpart --> ['driving'].	{}	1
+Spanish	prpart --> ['nadando'].	English	prpart --> ['swimming'].	{}	1
+Spanish	s --> ['¿'], cuantos(G), n(G,p,c), ['hay', '?'].	English	s --> ['how', 'many'], n(p,C), ['are', 'there', '?'].	{2=>1}	1
+Spanish	s --> ['¿'], cuantos(G), n(G,p,c), vp(G2,N,P,i), np(G2,N,P), ['?'].	English	s --> ['how', 'many'], n(p,C), do(N,P,ind), np(N,P), vp(N,P,d,i), ['?'].	{2=>1, 3=>4, 4=>3}	1
+Spanish	s --> ['¿'], cuantos(G), n(G,p,c), vp(G2,N,P,T), ['?'].	English	s --> ['how', 'many'], n(p,C), ['are'], vp(p,3,b,t), ['?'].	{2=>1, 3=>2}	1
+Spanish	s --> ['hay'], np(G,N,P), ['.'].	English	s --> ['there'], be(N,3,ind), np(N,3), ['.'].	{1=>2}	1
+Spanish	s --> ['¿'], np(G,N,P), vp(G,N,P,T), ['?'].	English	s --> be(N,P,ind), np(N,P), vp(N,P,b,T), ['?'].	{1=>2, 2=>3}	1
+Spanish	s --> ['¿'], np(G,N,P), vp(G,N,P,T), ['?'].	English	s --> do(N,P,ind), np(N,P), vp(N,3,d,T), ['?'].	{1=>2, 2=>3}	1
+Spanish	s --> np(G,N,P), vp(G,N,P,T), ['.'].	English	s --> np(N,P), vp(N,P,ns,T), ['.'].	{1=>1, 2=>2}	1
+Spanish	s --> ['¿', 'qué', 'es'], esto, ['?'].	English	s --> ['what'], be(N,3,ind), this(N), ['?'].	{1=>2}	1
+Spanish	s --> ['¿', 'qué'], vp(G,N,P,i), np(G,N,P), ['?'].	English	s --> ['what'], be(N,P,ind), np(N,P), vp(N,P,b,i), ['?'].	{1=>3, 2=>2}	1
+Spanish	s --> ['¿', 'qué'], vp(G,N,P,i), np(G,N,P), ['?'].	English	s --> ['what'], do(N,P,ind), np(N,P), vp(N,P,d,i), ['?'].	{1=>3, 2=>2}	1
+Spanish	s --> ['¿', 'quién'], vp(G,N,P,T), ['?'].	English	s --> ['who'], vp(N,3,ns,T), ['?'].	{1=>1}	1
+Spanish	start2 --> adj(G,N).	English	start2 --> adj.	{1=>1}	1
+Spanish	start2 --> digit, comma_digits.	English	start2 --> digit(N), comma_digit.	{1=>1, 2=>2}	1
+Spanish	start2 --> digit.	English	start2 --> digit(N).	{1=>1}	1
+Spanish	start2 --> ['¡'], interj, ['!'].	English	start2 --> interj, ['.'].	{1=>1}	1
+Spanish	start2 --> interj, ['.'].	English	start2 --> interj, ['.'].	{1=>1}	1
+Spanish	start2 --> interj, ['.'], s.	English	start2 --> interj, ['.'], s.	{1=>1, 2=>2}	1
+Spanish	start2 --> np(G,N,P).	English	start2 --> np(N,P).	{1=>1}	1
+Spanish	start2 --> s.	English	start2 --> s.	{1=>1}	1
+Spanish	start2 --> s, s.	English	start2 --> s, s.	{1=>1, 2=>2}	1
+Spanish	start --> ['"'], start2, ['"'].	English	start --> ['"'], start2, ['"'].	{1=>1}	1
+Spanish	s --> vp(G,N,P,T), ['.'].	English	s --> np(N,P), vp(N,P,ns,T), ['.'].	{1=>2}	0
+Spanish	s --> vp(G,N,P,T), ['.'].	English	s --> this(N), vp(N,3,ns,t), ['.'].	{1=>2}	1
+Spanish	s --> ['¿'], vp(G,N,P,T), np(G,N,P), ['?'].	English	s --> be(N,P,ind), np(N,P), vp(N,P,b,T), ['?'].	{1=>3, 2=>2}	1
+Spanish	s --> ['¿'], vp(G,N,P,T), np(G,N,P), ['?'].	English	s --> do(N,P,ind), np(N,P), vp(N,3,d,T), ['?'].	{1=>3, 2=>2}	1
+Spanish	v(p,1) --> ['tenemos'].	English	have(N,1,ind) --> ['have'].	{}	1
+Spanish	v(p,3) --> ['beben'].	English	prpart --> ['drinking'].	{}	1
+Spanish	v(p,3) --> ['caminan'].	English	prpart --> ['walking'].	{}	1
+Spanish	v(p,3) --> ['cocinan'].	English	prpart --> ['cooking'].	{}	1
+Spanish	v(p,3) --> ['comen'].	English	prpart --> ['eating'].	{}	1
+Spanish	v(p,3) --> ['corren'].	English	prpart --> ['running'].	{}	1
+Spanish	v(p,3) --> ['duermen'].	English	prpart --> ['sleeping'].	{}	1
+Spanish	v(p,3) --> ['escriben'].	English	prpart --> ['writing'].	{}	1
+Spanish	v(p,3) --> ['leen'].	English	prpart --> ['reading'].	{}	1
+Spanish	v(p,3) --> ['nadan'].	English	prpart --> ['swimming'].	{}	1
+Spanish	v(p,3) --> ['tienen'].	English	have(N,2,ind) --> ['have'].	{}	1
+Spanish	v(p,3) --> ['tienen'].	English	have(N,P,bar) --> ['have'].	{}	1
+Spanish	v(p,3) --> ['tienen'].	English	have(p,3,ind) --> ['have'].	{}	1
+Spanish	vp(G,N,P,i) --> estar(N,P), prpart.	English	vp(N,P,b,i) --> prpart.	{2=>1}	1
+Spanish	vp(G,N,P,i) --> estar(N,P), prpart.	English	vp(N,P,ns,i) --> be(N,P,ind), prpart.	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,i) --> ['no'], estar(N,P), prpart.	English	vp(N,P,b,i) --> ['not'], prpart.	{2=>1}	1
+Spanish	vp(G,N,P,i) --> ['no'], estar(N,P), prpart.	English	vp(N,P,ns,i) --> be(N,P,ind), ['not'], prpart.	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,i) --> ['no'], v(N,P).	English	vp(N,P,b,i) --> ['not'], prpart.	{1=>1}	1
+Spanish	vp(G,N,P,i) --> ['no'], v(N,P).	English	vp(N,P,ns,i) --> be(N,P,ind), ['not'], prpart.	{1=>2}	1
+Spanish	vp(G,N,P,i) --> v(N,P).	English	vp(N,P,b,i) --> prpart.	{1=>1}	1
+Spanish	vp(G,N,P,i) --> v(N,P).	English	vp(N,P,d,i) --> have(N,P,bar).	{1=>1}	1
+Spanish	vp(G,N,P,i) --> v(N,P).	English	vp(N,P,ns,i) --> be(N,P,ind), prpart.	{1=>2}	1
+Spanish	vp(G,N,P,t) --> cop(G,N,P), adj(G,N).	English	vp(N,P,b,t) --> adj.	{2=>1}	1
+Spanish	vp(G,N,P,t) --> cop(G,N,P), adj(G,N).	English	vp(N,P,ns,t) --> be(N,P,ind), adj.	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> cop(G,N,P), np_bare.	English	vp(N,P,b,t) --> np(N,P2).	{2=>1}	1
+Spanish	vp(G,N,P,t) --> cop(G,N,P), np_bare.	English	vp(N,P,ns,t) --> be(N,P,ind), np(N,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> cop(G,N,P), np(G,N,3).	English	vp(N,P,b,t) --> np(N,P2).	{2=>1}	1
+Spanish	vp(G,N,P,t) --> cop(G,N,P), np(G,N,3).	English	vp(N,P,ns,t) --> be(N,P,ind), np(N,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> estar(N,P), prpart, np(G2,N2,P3).	English	vp(N,P,b,t) --> prpart, np(N2,P2).	{2=>1, 3=>2}	1
+Spanish	vp(G,N,P,t) --> estar(N,P), prpart, np(G2,N2,P3).	English	vp(N,P,ns,t) --> be(N,P,ind), prpart, np(N2,P2).	{1=>1, 2=>2, 3=>3}	1
+Spanish	vp(G,N,P,t) --> llevar(N,P), np_bare.	English	vp(N,P,b,t) --> prpart, np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> llevar(N,P), np_bare.	English	vp(N,P,ns,t) --> be(N,P,ind), prpart, np(N2,P2).	{1=>2, 2=>3}	1
+Spanish	vp(G,N,P,t) --> llevar(N,P), np(G2,N2,3).	English	vp(N,P,b,t) --> prpart, np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> llevar(N,P), np(G2,N2,3).	English	vp(N,P,ns,t) --> be(N,P,ind), prpart, np(N2,P2).	{1=>2, 2=>3}	1
+Spanish	vp(G,N,P,t) --> ['no'], cop(G,N,P), adj(G,N).	English	vp(N,P,b,t) --> ['not'], adj.	{2=>1}	1
+Spanish	vp(G,N,P,t) --> ['no'], cop(G,N,P), adj(G,N).	English	vp(N,P,ns,t) --> be(N,P,ind), ['not'], adj.	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> ['no'], cop(G,N,P), np_bare.	English	vp(N,P,b,t) --> ['not'], np(N,P2).	{2=>1}	1
+Spanish	vp(G,N,P,t) --> ['no'], cop(G,N,P), np_bare.	English	vp(N,P,ns,t) --> be(N,P,ind), ['not'], np(N,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> ['no'], cop(G,N,P), np(G,N,3).	English	vp(N,P,b,t) --> ['not'], np(N,P2).	{2=>1}	1
+Spanish	vp(G,N,P,t) --> ['no'], cop(G,N,P), np(G,N,3).	English	vp(N,P,ns,t) --> be(N,P,ind), ['not'], np(N,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> ['no'], estar(N,P), prpart, np(G2,N2,P3).	English	vp(N,P,b,t) --> ['not'], prpart, np(N2,P2).	{2=>1, 3=>2}	1
+Spanish	vp(G,N,P,t) --> ['no'], estar(N,P), prpart, np(G2,N2,P3).	English	vp(N,P,ns,t) --> be(N,P,ind), ['not'], prpart, np(N2,P2).	{1=>1, 2=>2, 3=>3}	1
+Spanish	vp(G,N,P,t) --> ['no'], llevar(N,P), np_bare.	English	vp(N,P,b,t) --> ['not'], prpart, np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> ['no'], llevar(N,P), np_bare.	English	vp(N,P,ns,t) --> be(N,P,ind), ['not'], prpart, np(N2,P2).	{1=>2, 2=>3}	1
+Spanish	vp(G,N,P,t) --> ['no'], llevar(N,P), np(G2,N2,3).	English	vp(N,P,b,t) --> ['not'], prpart, np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> ['no'], llevar(N,P), np(G2,N2,3).	English	vp(N,P,ns,t) --> be(N,P,ind), ['not'], prpart, np(N2,P2).	{1=>2, 2=>3}	1
+Spanish	vp(G,N,P,t) --> ['no'], v(N,P), np(G2,N2,P3).	English	vp(N,P,b,t) --> ['not'], prpart, np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> ['no'], v(N,P), np(G2,N2,P3).	English	vp(N,P,ns,t) --> be(N,P,ind), ['not'], prpart, np(N2,P2).	{1=>2, 2=>3}	1
+Spanish	vp(G,N,P,t) --> ['no'], v(N,P), np(G2,N2,P3).	English	vp(N,P,ns,t) --> do(N,P,ind), ['not'], have(N,P,bar), np(N2,P2).	{1=>2, 2=>3}	1
+Spanish	vp(G,N,P,t) --> v(N,P), np(G2,N2,P3).	English	vp(N,P,b,t) --> prpart, np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> v(N,P), np(G2,N2,P3).	English	vp(N,P,d,t) --> have(N,P,bar), np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	vp(G,N,P,t) --> v(N,P), np(G2,N2,P3).	English	vp(N,P,ns,t) --> be(N,P,ind), prpart, np(N2,P2).	{1=>2, 2=>3}	1
+Spanish	vp(G,N,P,t) --> v(N,P), np(G2,N2,P3).	English	vp(N,P,ns,t) --> have(N,P,ind), np(N2,P2).	{1=>1, 2=>2}	1
+Spanish	v(s,1) --> ['bebo'].	English	prpart --> ['drinking'].	{}	1
+Spanish	v(s,1) --> ['como'].	English	prpart --> ['eating'].	{}	1
+Spanish	v(s,1) --> ['compro'].	English	prpart --> ['buying'].	{}	1
+Spanish	v(s,1) --> ['tengo'].	English	have(N,1,ind) --> ['have'].	{}	1
+Spanish	v(s,3) --> ['bebe'].	English	prpart --> ['drinking'].	{}	1
+Spanish	v(s,3) --> ['camina'].	English	prpart --> ['walking'].	{}	1
+Spanish	v(s,3) --> ['cocina'].	English	prpart --> ['cooking'].	{}	1
+Spanish	v(s,3) --> ['come'].	English	prpart --> ['eating'].	{}	1
+Spanish	v(s,3) --> ['compra'].	English	prpart --> ['buying'].	{}	1
+Spanish	v(s,3) --> ['corre'].	English	prpart --> ['running'].	{}	1
+Spanish	v(s,3) --> ['duerme'].	English	prpart --> ['sleeping'].	{}	1
+Spanish	v(s,3) --> ['escribe'].	English	prpart --> ['writing'].	{}	1
+Spanish	v(s,3) --> ['lee'].	English	prpart --> ['reading'].	{}	1
+Spanish	v(s,3) --> ['maneja'].	English	prpart --> ['driving'].	{}	1
+Spanish	v(s,3) --> ['nada'].	English	prpart --> ['swimming'].	{}	1
+Spanish	v(s,3) --> ['tiene'].	English	have(N,2,ind) --> ['have'].	{}	1
+Spanish	v(s,3) --> ['tiene'].	English	have(N,P,bar) --> ['have'].	{}	1
+Spanish	v(s,3) --> ['tiene'].	English	have(s,3,ind) --> ['has'].	{}	1

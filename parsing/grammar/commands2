@@ -1,0 +1,12 @@
+[swi('../../grammar/parses-def2')].
+%parses(eng, s, _, _, [mary, works], []).
+%parses(eng, s, _, _, [john, works], []).
+%parses(esp, s, _, _, [juan, trabaja], []).
+%translates([john], [], [juan], []).
+%translates([works], [], [trabaja], []).
+%translates([john, works], [], [juan, trabaja], []).
+translates([mary, runs], [], Z2, []). ; ; ;
+%translates([mary, works], [], Z, []). ;
+%translates([john, runs], [], Z, []). ;
+%translates([john, works], [], Z, []). ;
+%translates([john], [], Z, []). ;

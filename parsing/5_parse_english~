@@ -1,0 +1,3 @@
+#!/bin/sh
+cd `dirname $0`/temp.e2s
+../Phoenix/ParserLib/parse_text -config config 2>&1

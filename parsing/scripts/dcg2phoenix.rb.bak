@@ -1,0 +1,43 @@
+#!/usr/bin/ruby
+
+parent2transformations = {}
+
+STDIN.each { |line|
+  if line.match("^\n")
+    next
+  elsif line.match("^%")
+    next
+  elsif match = line.match(/^(\357\273\277)?([a-z0-9_]+) --> (.*).$/)
+    parent = $2
+    transformation = $3
+
+    phoenix_parts = []
+    transformation.split(/, /).each { |transformation_part|
+      if transformation_part.match(/^\[?'([^']+)'\]?$/)
+        phoenix_parts.push $1
+      elsif transformation_part.match(/^[a-z_0-9]+$/)
+        phoenix_parts.push "[#{transformation_part.upcase}]"
+      else
+        raise "Don't understand #{transformation_part} in #{line}"
+      end
+    }
+
+    parent = 'root' if parent == 'start'
+
+    if not parent2transformations.has_key?(parent)
+      parent2transformations[parent] = []
+    end
+    parent2transformations[parent].push phoenix_parts.join(' ')
+  else
+    raise "Line doesn't match regex: #{line}\n"
+  end
+}
+
+parent2transformations.each { |parent, transformations|
+  puts "[#{parent.upcase}]"
+  transformations.each { |transformation|
+    puts "\t(#{transformation})"
+  }
+  puts ";"
+  puts "\n"
+}

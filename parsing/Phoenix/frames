@@ -1,0 +1,5 @@
+# Only one frame makes it a standard CFG parser
+    FRAME: SingleFrame
+    NETS:
+	[ROOT]
+;

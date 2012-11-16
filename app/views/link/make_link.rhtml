@@ -1,0 +1,12 @@
+Link made...
+<%= params.inspect %>
+<ul>
+<% Link.find(:all).each { |link| %>
+  <li>
+    <input type='submit' value='delete' name='delete_link_<%= link.id %>'/>
+    <%= link.id %>) <%= link.from_rule.rule_text %> =&gt; <%= link.to_rule.rule_text %>
+    <%= link.argument_mapping.inspect %>
+    <%= link.bidirectional ? '' : 'UNI' %>
+  </li>
+<% } %>
+</ul>

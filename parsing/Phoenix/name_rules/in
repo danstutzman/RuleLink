@@ -1,0 +1,4 @@
+READY
+PARSE_0:
+SingleFrame:[ROOT] ( " [PHRASE] ( [S] ( ¿ [NP3SM] ( EL [COUNTABLE_M] ( CABALLO ) ) [VP3SM] ( ES [ADJSM] ( [COLORSM] ( NEGRO ) ) ) QMARK ) ) " )
+END_PARSE: ¿ el caballo es negro ?

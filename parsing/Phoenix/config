@@ -1,0 +1,6 @@
+verbose:1
+extract:0
+dir: .
+grammar: temp/spanish.net
+PROFILE:0
+IGNORE_OOV:0

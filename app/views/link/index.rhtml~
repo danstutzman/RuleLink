@@ -1,0 +1,307 @@
+<%= javascript_include_tag :defaults %>
+
+<form method='post' action='<%= url_for :action => 'index' %>'>
+
+<input type='text' name='to_translate' size='80' value='<%= params['to_translate'] %>'>
+<input type='checkbox' name='show_trees'/>show trees
+<input type='submit' name='submit' value='Translate'><br />
+<!-- see http://www.ltg.ed.ac.uk/~richard/utf-8.html -->
+<% ["\303\241", "\303\251", "\303\255", "\303\263", "\303\272",  "\303\261", "\302\277", "\302\241"].each { |symbol| %>
+  <button onClick='this.form.to_translate.value += "<%= symbol %>"; return false;'><%= symbol %></button>
+<% } %>
+<br /><br />
+
+<% if @error %>
+  <div style='border:red 5px solid;margin:5px;padding:5px'>
+    <%=h @error %>
+  </div>
+<% end %>
+
+<tt>
+<% if @translations %>
+  <% already_listed = [] %>
+  <% @translations.each_with_index { |translation, translation_index| %>
+  <% if params['show_trees'] %>
+    <h2>Translation #<%= translation_index %></h2>
+    <%= Translation.parents_features(translation).inspect rescue NoMethodError %>
+    <%= translation.inspect.
+      gsub(/\[\{/, '[<ul><li>{').
+      gsub(/\}\]/, '}</li></ul>]').
+      gsub(/\}, \{/, '}</li><li>{') %>
+  <% else
+    unified = Translation.parents_features(translation).inspect rescue NoMethodError
+    flattened = Translation.flatten(translation).join(' ')
+    next if already_listed.include?(flattened)
+    already_listed.push(flattened) %>
+
+    <li>
+    <% if unified != '[]' %><s style='color:#bbb'><% end %>
+      <%= flattened %>
+    <% if unified != '[]' %></s><% end %>
+    </li>
+  <% end %>
+<% } %>
+<br /><br />
+<% end %>
+</tt>
+
+<script>
+rule_id2is_used = new Array();
+<% $rule_id2is_used = {}
+sql = 'select from_rule_id from links union all select to_rule_id from links;'
+rows = ActiveRecord::Base.connection.execute(sql)
+rows.each { |row|
+  used_rule_id = row[0].to_i
+  $rule_id2is_used[used_rule_id] = true %>
+  rule_id2is_used[<%= used_rule_id %>] = true;<%
+} %>
+</script>
+
+<table border>
+  <tr>
+    <td>
+      <h1><%= @from_language.name %></h1>
+      <%= render :partial => 'rules', :locals => {
+        :language => @from_language, :language_role => 'source' } %>
+    </td>
+    <td>
+      <h1><%= @to_language.name %></h1>
+      <%= render :partial => 'rules', :locals => {
+        :language => @to_language, :language_role => 'target' } %>
+    </td>
+    <td>
+      <div id='arg_1_maps_to_div'>
+        Arg 1 maps to:<ul>
+          <li id='arg_1_maps_to_none_li'><input type='radio' id='arg_1_maps_to_none' name='arg_1_maps_to' value='none'/>none</li>
+          <li id='arg_1_maps_to_arg1_li'><input type='radio' id='arg_1_maps_to_arg1' name='arg_1_maps_to' value='arg1'/>arg 1</li>
+          <li id='arg_1_maps_to_arg2_li'><input type='radio' id='arg_1_maps_to_arg2' name='arg_1_maps_to' value='arg2'/>arg 2</li>
+          <li id='arg_1_maps_to_arg3_li'><input type='radio' id='arg_1_maps_to_arg3' name='arg_1_maps_to' value='arg3'/>arg 3</li>
+          <li id='arg_1_maps_to_arg4_li'><input type='radio' id='arg_1_maps_to_arg4' name='arg_1_maps_to' value='arg4'/>arg 4</li>
+        </ul>
+      </div>
+      <div id='arg_2_maps_to_div'>
+        Arg 2 maps to:<ul>
+          <li id='arg_2_maps_to_none_li'><input type='radio' id='arg_2_maps_to_none' name='arg_2_maps_to' value='none'/>none</li>
+          <li id='arg_2_maps_to_arg1_li'><input type='radio' id='arg_2_maps_to_arg1' name='arg_2_maps_to' value='arg1'/>arg 1</li>
+          <li id='arg_2_maps_to_arg2_li'><input type='radio' id='arg_2_maps_to_arg2' name='arg_2_maps_to' value='arg2'/>arg 2</li>
+          <li id='arg_2_maps_to_arg3_li'><input type='radio' id='arg_2_maps_to_arg3' name='arg_2_maps_to' value='arg3'/>arg 3</li>
+          <li id='arg_2_maps_to_arg4_li'><input type='radio' id='arg_2_maps_to_arg4' name='arg_2_maps_to' value='arg4'/>arg 4</li>
+        </ul>
+      </div>
+      <div id='arg_3_maps_to_div'>
+        Arg 3 maps to:<ul>
+          <li id='arg_3_maps_to_none_li'><input type='radio' id='arg_3_maps_to_none' name='arg_3_maps_to' value='none'/>none</li>
+          <li id='arg_3_maps_to_arg1_li'><input type='radio' id='arg_3_maps_to_arg1' name='arg_3_maps_to' value='arg1'/>arg 1</li>
+          <li id='arg_3_maps_to_arg2_li'><input type='radio' id='arg_3_maps_to_arg2' name='arg_3_maps_to' value='arg2'/>arg 2</li>
+          <li id='arg_3_maps_to_arg3_li'><input type='radio' id='arg_3_maps_to_arg3' name='arg_3_maps_to' value='arg3'/>arg 3</li>
+          <li id='arg_3_maps_to_arg4_li'><input type='radio' id='arg_3_maps_to_arg4' name='arg_3_maps_to' value='arg4'/>arg 4</li>
+        </ul>
+      </div>
+      <div id='arg_4_maps_to_div'>
+        Arg 4 maps to:<ul>
+          <li id='arg_4_maps_to_none_li'><input type='radio' id='arg_4_maps_to_none' name='arg_4_maps_to' value='none'/>none</li>
+          <li id='arg_4_maps_to_arg1_li'><input type='radio' id='arg_4_maps_to_arg1' name='arg_4_maps_to' value='arg1'/>arg 1</li>
+          <li id='arg_4_maps_to_arg2_li'><input type='radio' id='arg_4_maps_to_arg2' name='arg_4_maps_to' value='arg2'/>arg 2</li>
+          <li id='arg_4_maps_to_arg3_li'><input type='radio' id='arg_4_maps_to_arg3' name='arg_4_maps_to' value='arg3'/>arg 3</li>
+          <li id='arg_4_maps_to_arg4_li'><input type='radio' id='arg_4_maps_to_arg4' name='arg_4_maps_to' value='arg4'/>arg 4</li>
+        </ul>
+      </div>
+      <input type='checkbox' name='bidirectional' checked='checked' />Bidirectional<br/>
+      <input type='button' name='submit' value='Link' onClick="make_link()" />
+  </tr>
+</table>
+<input type='submit' name='submit' value='Delete all links' onClick='return confirm("Are you sure you want to delete all links?")'/>
+
+<script>
+function make_link() {
+	var from_rule_ids = get_selected_rule_ids(<%= @from_language.id %>);
+	var to_rule_ids   = get_selected_rule_ids(<%= @to_language.id %>);
+	var post_url = '/link/make_link';
+	post_url += '?from_rule_ids=' + concat_ints(from_rule_ids);
+	post_url += '&to_rule_ids=' + concat_ints(to_rule_ids);
+	post_url += '&arg_1_maps_to=' + get_radio_value(document.forms[0].arg_1_maps_to);
+	post_url += '&arg_2_maps_to=' + get_radio_value(document.forms[0].arg_2_maps_to);
+	post_url += '&arg_3_maps_to=' + get_radio_value(document.forms[0].arg_3_maps_to);
+	post_url += '&arg_4_maps_to=' + get_radio_value(document.forms[0].arg_4_maps_to);
+	if (document.forms[0]['bidirectional'].checked)
+		post_url += '&bidirectional=' + document.forms[0]['bidirectional'];
+
+	new Ajax.Updater('all_links', post_url, {asynchronous:true, evalScripts:true});
+
+        for (var i = 0; i < from_rule_ids.length; i++)
+		rule_id2is_used[from_rule_ids[i]] = true;
+        for (var i = 0; i < to_rule_ids.length; i++)
+		rule_id2is_used[to_rule_ids[i]] = true;
+}
+function concat_ints(int_array) {
+	var concatted = '';
+        for (var i = 0; i < int_array.length; i++)
+		concatted += int_array[i] + ',';
+	return concatted;
+}
+function get_selected_rule_ids(language_id) {
+        var select = document.forms[0]['rule_from_language_' + language_id + '[]'];
+        var rule_ids = new Array();
+        for (var i = 0; i < select.options.length; i++)
+                if (select.options[i].selected)
+                        rule_ids.push(select.options[i].value);
+	return rule_ids;
+}
+function get_radio_value(radio){
+	for (var i = 0; i < radio.length; i++)
+		if (radio[i].checked)
+			return radio[i].value;
+	return '';
+}
+</script>
+
+<hr/>
+<div id='all_links'>
+<ul>
+<% Link.find(:all).each { |link| %>
+  <li>
+    <input type='submit' value='delete' name='delete_link_<%= link.id %>'/>
+    <%= link.id %>) <%= link.from_rule.inspect %> =&gt; <%= link.to_rule.inspect %>
+    <%= link.argument_mapping.inspect %>
+    <%= link.bidirectional ? '' : 'UNI' %>
+  </li>
+<% } %>
+</ul>
+</div>
+
+<hr/>
+
+
+</form>
+
+<script>
+rule_id2args = Array();
+<% for rule in Rule.find(:all) %>
+  rule_id2args[<%= rule.id %>] = <%= rule.arguments %>;
+<% end %>
+function select_changed(language_id, language_role) {
+	var select = document.forms[0]['rule_from_language_' + language_id + '[]'];
+	var args = -1;
+	for (var i = 0; i < select.options.length; i++) {
+		if (select.options[i].selected) {
+			var rule_id = select.options[i].value;
+			if (args == -1)
+				args = rule_id2args[rule_id];
+			else if (args != rule_id2args[rule_id])
+				args = -2;
+		}
+	}
+
+	if (args == -2) {
+		alert("You can only multi-select rules that have the same number of arguments.");
+		args = 10;
+	}
+	else if (args == -1)
+		args = 10; // reveal all
+
+	if (language_role == 'source') {
+		document.getElementById('arg_1_maps_to_div').style.display =
+			(args >= 1) ? 'block' : 'none';
+		document.getElementById('arg_2_maps_to_div').style.display =
+			(args >= 2) ? 'block' : 'none';
+		document.getElementById('arg_3_maps_to_div').style.display =
+			(args >= 3) ? 'block' : 'none';
+		document.getElementById('arg_4_maps_to_div').style.display =
+			(args >= 4) ? 'block' : 'none';
+
+		if (args < 1)
+			document.forms[0]['arg_1_maps_to_none'].checked = true;
+		if (args < 2)
+			document.forms[0]['arg_2_maps_to_none'].checked = true;
+		if (args < 3)
+			document.forms[0]['arg_3_maps_to_none'].checked = true;
+		if (args < 4)
+			document.forms[0]['arg_4_maps_to_none'].checked = true;
+	}
+	else if (language_role == 'target') {
+		document.getElementById('arg_1_maps_to_arg1_li').style.display =
+		document.getElementById('arg_2_maps_to_arg1_li').style.display =
+		document.getElementById('arg_3_maps_to_arg1_li').style.display =
+		document.getElementById('arg_4_maps_to_arg1_li').style.display =
+			(args >= 1) ? 'list-item' : 'none';
+
+		document.getElementById('arg_1_maps_to_arg2_li').style.display =
+		document.getElementById('arg_2_maps_to_arg2_li').style.display =
+		document.getElementById('arg_3_maps_to_arg2_li').style.display =
+		document.getElementById('arg_4_maps_to_arg2_li').style.display =
+			(args >= 2) ? 'list-item' : 'none';
+
+		document.getElementById('arg_1_maps_to_arg3_li').style.display =
+		document.getElementById('arg_2_maps_to_arg3_li').style.display =
+		document.getElementById('arg_3_maps_to_arg3_li').style.display =
+		document.getElementById('arg_4_maps_to_arg3_li').style.display =
+			(args >= 3) ? 'list-item' : 'none';
+
+		document.getElementById('arg_1_maps_to_arg4_li').style.display =
+		document.getElementById('arg_2_maps_to_arg4_li').style.display =
+		document.getElementById('arg_3_maps_to_arg4_li').style.display =
+		document.getElementById('arg_4_maps_to_arg4_li').style.display =
+			(args >= 4) ? 'list-item' : 'none';
+
+		if (args >= 1 &&
+		document.getElementById('arg_1_maps_to_div').style.display == 'block')
+			document.forms[0]['arg_1_maps_to_arg1'].checked = true;
+		else
+			document.forms[0]['arg_1_maps_to_none'].checked = true;
+
+		if (args >= 2 &&
+		document.getElementById('arg_2_maps_to_div').style.display == 'block')
+			document.forms[0]['arg_2_maps_to_arg2'].checked = true;
+		else
+			document.forms[0]['arg_2_maps_to_none'].checked = true;
+
+		if (args >= 3 &&
+		document.getElementById('arg_3_maps_to_div').style.display == 'block')
+			document.forms[0]['arg_3_maps_to_arg3'].checked = true;
+		else
+			document.forms[0]['arg_3_maps_to_none'].checked = true;
+
+		if (args >= 4 &&
+		document.getElementById('arg_4_maps_to_div').style.display == 'block')
+			document.forms[0]['arg_4_maps_to_arg4'].checked = true;
+		else
+			document.forms[0]['arg_4_maps_to_none'].checked = true;
+	}
+	else {
+		alert('Unknown language_role');
+	}
+}
+
+rule_id2rule_text = new Array();
+
+from_id = <%= @from_language.id %>;
+rule_id2rule_text[from_id] = new Array();
+<% Rule.find(:all, :conditions => ['language_id = ?', @from_language.id ],
+  :order => 'line_number').each { |rule| %>
+  rule_id2rule_text[from_id][<%= rule.id %>] = "<%= rule.rule_text.gsub(/\"/, '\\"') %>";<%
+} %>
+
+to_id = <%= @to_language.id %>;
+rule_id2rule_text[to_id] = new Array();
+<% Rule.find(:all, :conditions => ['language_id = ?', @to_language.id ],
+  :order => 'line_number').each { |rule| %>
+  rule_id2rule_text[to_id][<%= rule.id %>] = "<%= rule.rule_text.gsub(/\"/, '\\"') %>";<%
+} %>
+
+function rule_filter_changed(language_id) {
+  var filter = document.forms[0]["language_" + language_id + "_rule_filter"].value;
+ 
+  var select = document.forms[0]["rule_from_language_" + language_id + '[]'];
+  while (select.options.length)
+    select.options[0] = null;
+  for (var rule_id in rule_id2rule_text[language_id]) {
+    if (rule_id == ('' + parseInt(rule_id))) {
+      var new_rule_text = rule_id2rule_text[language_id][rule_id];
+      if (filter == '' || new_rule_text.indexOf(filter) != -1) {
+        var used_sign = (rule_id2is_used[rule_id]) ? '- ' : '. ';
+        select.options[select.length] = new Option(used_sign + new_rule_text, rule_id);
+      }
+    }
+  }
+}
+</script>

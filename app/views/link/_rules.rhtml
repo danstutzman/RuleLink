@@ -1,0 +1,17 @@
+Filter
+<input type='text' name='language_<%= language.id %>_rule_filter' size='30'
+  onKeyUp='rule_filter_changed(<%= language.id %>)' autocomplete='off' />
+<br/>
+
+<% conditions = params["language_#{language.id}_rule_filter"] ?
+  [ 'language_id = ? and rule_text like ?', language.id,
+    (' ' + params["language_#{language.id}_rule_filter"] + ' ').gsub(/ +/, '%') ] :
+  [  'language_id = ?', language.id ] %>
+<select multiple size='30' name='rule_from_language_<%= language.id %>[]'
+  onChange='select_changed(<%= language.id %>, "<%= language_role %>")'>
+  <% Rule.find(:all,
+    :conditions => conditions, :order => 'line_number').each { |rule| %>
+    <% used_sign = ($rule_id2is_used[rule.id]) ? '- ' : '. ' %>
+    <option value='<%= rule.id %>'><%= used_sign %><%=h rule.rule_text %></option>
+  <% } %>
+</select>

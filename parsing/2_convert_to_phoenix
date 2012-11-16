@@ -1,0 +1,3 @@
+#!/bin/sh
+cat temp.e2s/english.expanded.dcg | ruby scripts/dcg2phoenix.rb > temp.e2s/english.gra
+cat temp.s2e/spanish.expanded.dcg | grep -v "''" | ruby scripts/dcg2phoenix.rb > temp.s2e/spanish.gra

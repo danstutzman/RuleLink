@@ -1,0 +1,4 @@
+ROOT: " PHRASE "
+PHRASE: a b
+PHRASE: c d
+PHRASE: a

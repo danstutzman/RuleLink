@@ -1,0 +1,692 @@
+﻿¡ hola !
+¡ hola !
+una niña
+un niño
+un niño
+una niña
+la niña come .
+la niña bebe .
+el niño come .
+el niño bebe .
+una niña
+un niño
+la niña bebe .
+el niño bebe .
+la niña come .
+el niño come .
+una mujer
+un hombre
+una mujer
+un hombre
+una mujer
+un hombre
+la mujer bebe .
+el hombre come .
+la mujer come .
+el hombre bebe .
+el hombre come .
+la mujer come .
+la niña come .
+el niño come .
+el hombre come .
+la niña bebe .
+el hombre bebe .
+la niña come .
+la niña corre .
+el niño corre .
+el hombre corre .
+la mujer corre .
+la niña lee .
+el niño lee .
+el hombre lee .
+la mujer lee .
+la mujer corre .
+la mujer lee .
+la mujer bebe .
+la mujer come .
+el niño corre .
+el niño come .
+el niño bebe .
+el niño lee .
+la niña bebe .
+las niñas beben .
+el niño come .
+los niños comen .
+la niña corre .
+las niñas corren .
+el hombre bebe .
+los hombres beben .
+el niño lee .
+los niños leen .
+la mujer come .
+las mujeres comen .
+los hombres leen .
+las mujeres leen .
+los hombres corren .
+las mujeres corren .
+la niña lee .
+las mujeres leen .
+la mujer lee .
+las niñas leen .
+los niños
+las niñas
+los hombres
+las mujeres
+los niños comen .
+las niñas corren .
+las mujeres beben .
+los hombres leen .
+él corre .
+él come .
+ella bebe .
+ella lee .
+él corre .
+ella bebe .
+ellas comen .
+ellos leen .
+él corre .
+ella corre .
+ellas corren .
+él cocina .
+ella cocina .
+ellos cocinan .
+los niños nadan .
+la niña nada .
+el hombre nada .
+las mujeres nadan .
+el hombre cocina .
+los hombres cocinan .
+el hombre come .
+los hombres comen .
+la mujer corre .
+la mujer nada .
+las mujeres corren .
+las mujeres nadan .
+él nada .
+él corre .
+él cocina .
+él come .
+ella escribe .
+él escribe .
+ellos escriben .
+ellos comen .
+ellas cocinan .
+ellos nadan .
+ellas escriben .
+las niñas leen .
+la niña lee .
+las niñas escriben .
+la niña escribe .
+ella lee .
+él bebe .
+ella escribe .
+él come .
+ella bebe .
+ella come .
+él bebe .
+él come .
+¡ adiós !
+¡ adiós !
+hola .
+hola .
+un sándwich
+un sándwich
+un sándwich
+un huevo
+un huevo
+una manzana
+pan
+pan
+pan
+ café
+café
+ leche
+un sándwich
+un huevo
+una manzana
+ pan
+café
+leche
+una niña y una mujer
+un niño y un hombre
+un sándwich y leche
+un hombre y una mujer
+arroz y una manzana
+pan y agua
+el niño bebe leche .
+la mujer bebe café .
+el niño y el hombre beben agua .
+la niña come pan .
+el hombre come un huevo .
+el hombre y la mujer comen arroz .
+ella come una manzana .
+él come arroz .
+ellos comen huevos .
+ellos comen sándwiches .
+ellos comen huevos .
+ellos comen sándwiches .
+él come arroz .
+ella bebe agua .
+un perro
+un perro
+un perro
+un gato
+un gato
+un caballo
+un carro
+un carro
+un carro
+un periódico
+un periódico
+una bicicleta
+un perro
+un gato
+un caballo
+un carro
+un periódico
+una bicicleta
+el hombre maneja un carro .
+la mujer maneja un carro .
+el niño camina .
+la niña camina .
+el hombre corre .
+la mujer camina .
+la niña corre .
+el niño camina .
+ellos comen manzanas .
+él maneja un carro .
+ellos leen un periódico .
+ella lee un libro .
+él tiene un gato .
+ella tiene un perro .
+ellos tienen un periódico .
+él tiene un carro .
+ella tiene sándwiches .
+ellas tienen un caballo .
+él tiene libros .
+ella tiene un pez .
+ellos tienen bolígrafos .
+un libro
+un bolígrafo
+un pez
+él duerme .
+ella duerme .
+ellos duermen .
+el pez nada .
+el gato duerme .
+el perro come .
+el caballo corre .
+ellos nadan .
+ellos leen .
+ellos caminan .
+ellas duermen .
+los niños beben .
+los adultos comen .
+los niños nadan .
+los adultos corren .
+la niña corre .
+los niños corren .
+el adulto lee .
+los adultos leen .
+el hombre maneja .
+el niño no maneja .
+la mujer maneja .
+la niña no maneja .
+los adultos cocinan .
+los adultos no cocinan .
+los niños escriben .
+los niños no escriben .
+la mujer maneja .
+la mujer no maneja .
+ellos nadan .
+ellos no nadan .
+él duerme .
+él no duerme .
+ellos no cocinan . comen .
+ellos cocinan . no comen .
+él no camina . corre .
+él camina . no corre .
+las mujeres tienen arroz .
+las mujeres no tienen arroz .
+el niño tiene un bolígrafo .
+el niño no tiene un bolígrafo .
+el niño tiene leche .
+el niño no tiene leche .
+las niñas tienen bicicletas .
+las niñas no tienen bicicletas .
+el perro corre .
+el perro no corre .
+los niños tienen agua .
+los niños no tienen agua .
+¿ qué es esto ?
+es una manzana .
+¿ qué es esto ?
+es un periódico .
+¿ qué es esto ?
+es un gato .
+¿ qué es esto ?
+es una bicicleta .
+¿ qué es esto ?
+es un huevo .
+¿ qué es esto ?
+es un bolígrafo .
+¿ qué es esto ?
+es un pez .
+¿ qué es esto ?
+es arroz .
+¿ duerme él ?
+sí . duerme .
+¿ duerme ella ?
+no . no duerme .
+¿ el perro nada ?
+sí .
+¿ el caballo nada ?
+no .
+¿ ella lee un periódico ?
+no .
+¿ ella lee un libro ?
+sí .
+¿ él come una manzana ?
+no .
+¿ él come una manzana ?
+sí .
+¡ adiós !
+¡ adiós !
+hola .
+hola .
+blanco
+blanco
+blanco
+negro
+negro
+rojo
+azul
+azul
+azul
+verde
+verde
+amarillo
+azul
+blanco
+verde
+negro
+rojo
+amarillo
+la leche es blanca .
+el arroz es blanco .
+el carro es blanco .
+el carro es verde .
+la manzana es verde .
+la bicicleta es verde .
+los huevos son rojos .
+las bicicletas son rojas .
+las manzanas son verdes .
+los bolígrafos son verdes .
+los carros son blancos .
+las bicicletas son blancas .
+el huevo es azul .
+los huevos son azules .
+la bicicleta es amarilla .
+las bicicletas son amarillas .
+el carro es negro .
+los carros son negros .
+la pelota es roja .
+las pelotas son rojas .
+el carro es rojo .
+los carros son rojos .
+el gato es negro .
+los gatos son negros .
+el pez es rojo .
+los peces son rojos .
+la bicicleta es amarilla .
+las bicicletas son amarillas .
+es roja .
+es azul .
+es negro .
+es blanco .
+es verde .
+es rojo .
+son blancos .
+es amarillo .
+son verdes .
+es blanco y negro .
+son rojas .
+son blancos .
+es azul y verde .
+el perro es negro .
+el perro es blanco .
+el gato es negro .
+el gato es blanco .
+el pasto es verde .
+el cielo es azul .
+la luna es blanca .
+el sol es amarillo .
+la flor es roja .
+el sol es amarillo .
+la manzana es amarilla .
+el cielo es azul .
+el huevo es azul .
+la luna es blanca .
+el carro es blanco .
+el pasto es verde .
+la pelota es verde .
+la flor es pequeña .
+el huevo es pequeño .
+las flores son pequeñas .
+los huevos son pequeños .
+las flores son grandes .
+los libros son grandes .
+el pez es grande .
+el huevo es grande .
+el perro es grande .
+el perro es pequeño .
+las flores son grandes .
+las flores son pequeñas .
+ella es doctora .
+él es maestro .
+ellos son policías .
+él es alumno .
+ella es alumna .
+ellos son alumnos .
+él es policía .
+ella es maestra .
+él es médico .
+ellos son alumnos .
+yo soy un niño .
+yo soy una niña .
+yo soy un hombre .
+yo soy una mujer .
+yo soy maestra .
+yo no soy maestro .
+yo soy médico .
+yo no soy médico .
+yo soy alumno .
+yo no soy alumno .
+yo tengo un libro verde .
+yo tengo un libro amarillo .
+yo tengo un libro rojo .
+usted tiene un libro verde .
+usted tiene un libro amarillo .
+usted tiene un libro rojo .
+¿ usted es médico ?
+sí . soy médico .
+¿ usted es médico ?
+no . no soy médico .
+hola . ¿ qué bebe usted ?
+bebo agua .
+hola . ¿ qué come usted ?
+como arroz .
+hola . ¿ qué tiene usted ?
+tengo un sándwich .
+hola . ¿ qué tiene usted ?
+tengo un bolígrafo .
+soy maestra .
+nosotros somos maestros .
+soy una niña .
+nosotras somos niñas .
+nosotras somos niñas .
+nosotros somos niños .
+nosotros somos policías .
+nosotros somos médicos .
+yo tengo una bicicleta roja .
+nosotras tenemos bicicletas verdes .
+yo tengo manzanas rojas .
+nosotras tenemos manzanas verdes .
+¿ qué está haciendo la mujer ?
+la mujer está comiendo .
+¿ qué está haciendo la niña ?
+la niña está comiendo .
+¿ qué está haciendo el hombre ?
+el hombre está comiendo .
+¿ qué está haciendo el niño ?
+el niño está comiendo .
+¿ qué está haciendo la mujer ?
+la mujer está caminando .
+¿ qué está haciendo la niña ?
+la niña está caminando .
+¿ qué está haciendo el hombre ?
+el hombre está caminando .
+¿ qué está haciendo el niño ?
+el niño está caminando .
+yo tengo flores rojas .
+usted tiene flores rojas .
+él tiene flores rojas .
+ella tiene flores rojas .
+nosotros tenemos flores rojas .
+ellos tienen flores rojas .
+los caballos corren .
+el caballo blanco no está corriendo .
+los gatos duermen .
+el gato negro no está durmiendo .
+los perros corren .
+el perro blanco no está corriendo .
+¿ qué está haciendo el hombre ?
+el hombre está cocinando .
+¿ qué está haciendo la mujer ?
+la mujer está leyendo .
+¿ qué está haciendo el niño ?
+el niño está corriendo .
+¿ qué está haciendo el médico ?
+el médico está escribiendo .
+¿ qué está haciendo el policía ?
+el policía está manejando .
+¿ qué está haciendo la niña ?
+la niña está caminando .
+¿ qué está haciendo el pez ?
+el pez está nadando .
+¿ qué está haciendo el niño ?
+el niño está nadando .
+¿ qué está haciendo usted ?
+estoy escribiendo .
+¿ qué está haciendo usted ?
+estoy manejando .
+adiós .
+adiós .
+hola .
+hola .
+un carro
+un huevo
+dos perros
+dos bolígrafos
+tres bicicletas
+tres gatos
+cuatro niños
+cuatro hombres
+seis niñas
+cinco libros
+cinco periódicos
+seis manzanas
+uno
+dos
+tres
+cuatro
+cinco
+seis
+uno , dos , tres
+seis , uno , tres , cinco , dos
+dos , cuatro , seis
+uno , dos , tres , cuatro , cinco
+hay un pez .
+hay un libro .
+hay una mujer .
+hay un huevo .
+hay un niño .
+hay un celular .
+hay cinco peces .
+hay tres libros .
+hay cuatro mujeres .
+hay seis huevos .
+hay dos niños .
+hay un celular .
+hay dos celulares .
+hay tres pelotas .
+hay una cama .
+hay cuatro llaves .
+hay una taza .
+hay cuatro sillas .
+hay dos mesas .
+hay tres teléfonos .
+hay una pelota .
+hay tres sillas .
+hay dos mesas .
+hay una mesa .
+¿ cuántos peces hay ?
+hay tres peces .
+¿ cuántas llaves hay ?
+hay cuatro llaves .
+¿ cuántos policías hay ?
+hay dos policías .
+¿ cuántas manzanas hay ?
+hay una manzana .
+¿ cuántas sillas hay ?
+hay seis sillas .
+¿ cuántos teléfonos hay ?
+hay cinco teléfonos .
+¿ cuántas camas hay ?
+hay dos camas .
+hay tres huevos .
+hay cinco huevos .
+hay cuatro tazas .
+hay seis tazas .
+tres platos son blancos .
+dos manzanas son verdes .
+una flor es roja .
+cuatro tazones son azules .
+¿ cuántas mesas son blancas ?
+dos mesas son blancas .
+¿ cuántas pelotas son rojas ?
+una pelota es roja .
+¿ cuántos tazones son amarillos ?
+dos tazones son amarillos .
+¿ cuántos teléfonos son negros ?
+un teléfono es negro .
+zapatos
+zapatos
+zapatos
+una camisa
+una camisa
+pantalones
+un abrigo
+un abrigo
+un abrigo
+un vestido
+un vestido
+una falda
+zapatos
+una camisa
+pantalones
+un abrigo
+un vestido
+una falda
+una camisa azul
+una camisa roja
+una camiseta verde
+una camiseta amarilla
+¿ cuántas tazas tienen ustedes ?
+tenemos cuatro tazas .
+¿ cuántos sándwiches tienen ustedes ?
+tenemos cinco sándwiches .
+¿ cuántos tazones tiene usted ?
+tengo tres tazones .
+¿ cuántos platos tiene usted ?
+tengo dos platos .
+yo tengo flores amarillas .
+usted tiene flores rojas .
+nosotras tenemos flores blancas .
+ustedes tienen flores azules .
+la niña lleva camiseta .
+el niño no lleva camiseta .
+la mujer lleva zapatos .
+el hombre no lleva zapatos .
+el niño lleva pantalones .
+la niña no lleva pantalones . lleva falda .
+los hombres llevan sombreros .
+tres mujeres llevan pantalones . una mujer lleva vestido .
+la mujer lleva vestido .
+la mujer lleva falda .
+la mujer lleva pantalones .
+la mujer lleva sombrero .
+¿ él está durmiendo ?
+sí . está durmiendo .
+¿ usted está leyendo ?
+sí . estoy leyendo .
+¿ usted está escribiendo ?
+sí . estoy escribiendo .
+él compra un sombrero .
+ella compra dos sombreros .
+él compra tres camisetas .
+ella compra cuatro camisetas .
+el hombre lleva abrigo .
+el hombre compra un abrigo .
+el hombre lleva sombrero .
+el hombre compra un sombrero .
+yo compro una falda .
+yo llevo falda .
+yo compro pantalones .
+yo llevo pantalones .
+¿ quién está comiendo ?
+el policía está comiendo .
+¿ quién está leyendo ?
+los alumnos están leyendo .
+¿ quién está bebiendo ?
+las mujeres están bebiendo .
+¿ quién está escribiendo ?
+la niña está escribiendo .
+¿ quién tiene el sombrero ?
+la mujer tiene el sombrero .
+¿ quién tiene la pelota ?
+el niño tiene la pelota .
+¿ quién tiene los libros ?
+las niñas tienen los libros .
+¿ quién tiene el periódico ?
+el médico tiene el periódico .
+¿ quién lleva zapatos ?
+yo llevo zapatos .
+¿ quién lleva sombreros ?
+nosotras llevamos sombreros .
+¿ quién está caminando ?
+nosotras estamos caminando .
+¿ quién está corriendo ?
+nosotros estamos corriendo .
+¿ cuántos árboles hay ?
+hay tres árboles .
+¿ cuántos árboles hay ?
+hay cuatro árboles .
+¿ cuántos tazones hay ?
+hay un tazón .
+¿ cuántos niños hay ?
+hay seis niños .
+¿ qué es esto ?
+es agua .
+¿ qué es esto ?
+es un plato .
+¿ qué es esto ?
+es un árbol .
+¿ el pasto es verde ?
+sí . es verde .
+¿ qué es esto ?
+es una bicicleta .
+¿ cuántas bicicletas hay ?
+hay tres bicicletas .
+¿ quién tiene una bicicleta ?
+ella tiene una bicicleta .
+¿ ella tiene una bicicleta ?
+sí .
+¿ qué es esto ?
+es un sándwich .
+¿ cuántos sándwiches hay ?
+hay dos sándwiches .
+¿ ustedes comen sándwiches ?
+sí .
+¿ cuántas llaves hay ?
+hay cuatro llaves .
+¿ ustedes están leyendo ?
+no . estamos escribiendo .
+¿ usted tiene peces ?
+sí .
+¿ el caballo es negro ?
+no . no es negro .
+hola .
+¡ adiós !
+¡ hola !
+adiós .

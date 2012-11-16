@@ -1,0 +1,2 @@
+#!/bin/sh
+cat temp.s2e/spanish.expanded.dcg | scripts/generate.rb | head -30

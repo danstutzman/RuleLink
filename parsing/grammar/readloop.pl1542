@@ -1,0 +1,50 @@
+read_loop :-
+    seeing( Stream ),
+    read_line_to_codes( Stream, Chars ),
+    Chars \== end_of_file,
+    chars_make_word_list( Chars, Wordlist ),
+    process_word_list(Wordlist),
+    read_loop.
+chars_make_word_list(Chars, Wordlist) :-
+  chars_equal_word_list(Chars, Wordlist),
+  write(Wordlist),
+  write('\n').
+
+process_word_list(_).
+
+chars_equal_word_list([], []).
+chars_equal_word_list(CharListWithoutSpace, [CharWord]) :-
+  no_space_in_chars(CharListWithoutSpace),
+  name(CharWord, CharListWithoutSpace).
+chars_equal_word_list(CharListWithSpaces, [CharWord1 | CharWords]) :-
+  is_first_split(CharListWithSpaces, CharListBeforeSpace, CharListAfterSpace),
+  chars_equal_word_list(CharListAfterSpace, CharWords),
+  name(CharWord1, CharListBeforeSpace).
+
+is_first_split([32 | CharListWithSpacesFollowing], [], CharListWithSpacesFollowing) :- !.
+is_first_split([Char1 | CharListWithSpacesFollowing], [Char1 | CharListBeforeSpaceFollowing], CharListAfterSpace) :-
+  Char1 =\= 32,
+  is_first_split(CharListWithSpacesFollowing, CharListBeforeSpaceFollowing, CharListAfterSpace).
+
+no_space_in_chars([]).
+no_space_in_chars([32 | _]) :- !, fail.
+no_space_in_chars([Char | CharList]) :-
+  Char =\= 32,
+  no_space_in_chars(CharList).
+
+%getsentence(Wordlist, Chars) :- getrest(Chars, Wordlist). %getrest(Char, Wordlist, Chars).
+%getsentence(Wordlist, []) :- write('empty'). %getrest(Char, Wordlist, Chars).
+%getsentence([Word], []) :- !, write('last word'). %getrest(Char, Wordlist, Chars).
+%getrest([46 | Chars], []) :- !.
+%getrest([32 | Chars], Wordlist) :- !,
+%  getsentence(Wordlist, Chars).
+%getrest([Letter | Chars], [Word | Wordlist]) :-
+%  getletters(Letter, Letters),
+%  write(Letters),
+%  write('\n'),
+%  name(Word, Letters),
+%  getrest(Chars, Wordlist).
+%getletters(46, []) :- !.
+%getletters(32, []) :- !.
+%getletters(Let, [Let, Let2 | Letters]) :- getletters(Let2, Letters).
+%getletters(Let, [Let | []]) :- !.

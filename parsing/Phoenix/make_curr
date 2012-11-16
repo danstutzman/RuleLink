@@ -1,0 +1,3 @@
+#!/bin/sh
+LANGCODE=es-419
+zcat ~/Aqua/script/update_acts/$LANGCODE.txt.gz | egrep '^01[[:space:]]0[12345][[:space:]]GENERAL[[:space:]][0-9]+[[:space:]][0-9]+[[:space:]]01' | awk 'BEGIN { FS = "\t" } { print $11 }' | sed 's/\xc2\xa1/\xc2\xa1 /g' | sed 's/\xc2\xbf/\xc2\xbf /g' | sed 's/\([!\.\?,]\)/ \1/g' | sed 's/\xc3\x89/\xc3\xa9/g' | tr "A-Z" "a-z" > curr

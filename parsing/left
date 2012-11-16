@@ -1,0 +1,2 @@
+#!/bin/sh
+grep -v "   \"" progress.e2s | less

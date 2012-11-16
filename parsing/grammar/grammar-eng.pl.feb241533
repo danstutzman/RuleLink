@@ -1,0 +1,130 @@
+﻿start --> ['"'], start2, ['"'].
+
+start2 --> interj, stop.
+start2 --> np(N).
+start2 --> s.
+start2 --> s, s.
+start2 --> interj, stop, s.
+start2 --> adj.
+
+interj --> ['hello'].
+interj --> ['goodbye'].
+interj --> ['no'].
+interj --> ['yes'].
+
+stop --> ['.'].
+qmark --> ['qmark'].
+
+s --> np(N), be(N), prpart, stop.
+s --> np(N), be(N), prpart, np(N2), stop.
+s --> np(N), be(N), ['not'], prpart, stop.
+s --> np(N), be(N), ['not'], prpart, np(N2), stop.
+s --> np(N), have(N), np(N2), stop.
+s --> np(N), do(N), ['not', 'have'], np(N2), stop.
+s --> this(N), be(N), np(N), stop.
+s --> ['what'], be(N), this(N), qmark.
+s --> be(N), np(N), prpart, qmark.
+s --> be(N), np(N), prpart, np(N2), qmark.
+s --> np(N), be(N), adj, stop.
+s --> np(N), be(N), np(N), stop.
+
+this(s) --> ['this'].
+this(p) --> ['these'].
+
+have(s) --> ['has'].
+have(p) --> ['have'].
+
+do(s) --> ['does'].
+do(p) --> ['do'].
+
+be(s) --> ['is'].
+be(p) --> ['are'].
+
+np(s) --> ['a'], n(s,nac).
+np(s) --> ['an'], n(s,ac).
+np(s) --> n(s,uc).
+np(N) --> ['the'], n(N,C).
+np(p) --> n(p,C).
+np(s) --> ['he'].
+np(s) --> ['she'].
+np(p) --> ['they'].
+np(p) --> np(s), ['and'], np(s).
+np(s) --> ['it'].
+
+n(s,ac) --> ['apple'].
+n(s,ac) --> ['egg'].
+n(s,ac) --> ['adult'].
+n(s,nac) --> ['boy'].
+n(s,nac) --> ['girl'].
+n(s,nac) --> ['man'].
+n(s,nac) --> ['woman'].
+n(s,nac) --> ['sandwich'].
+n(s,nac) --> ['cat'].
+n(s,nac) --> ['dog'].
+n(s,nac) --> ['horse'].
+n(s,nac) --> ['book'].
+n(s,nac) --> ['car'].
+n(s,nac) --> ['newspaper'].
+n(s,nac) --> ['pen'].
+n(s,nac) --> ['bicycle'].
+n(s,nac) --> ['fish'].
+n(s,nac) --> ['child'].
+n(s,nac) --> ['ball'].
+n(s,nac) --> ['bicycle'].
+n(s,nac) --> ['flower'].
+n(s,nac) --> ['moon'].
+n(s,nac) --> ['sky'].
+n(s,nac) --> ['sun'].
+n(s,nac) --> ['doctor'].
+n(s,nac) --> ['police', 'officer'].
+n(s,nac) --> ['student'].
+n(s,nac) --> ['teacher'].
+n(s,uc) --> ['bread'].
+n(s,uc) --> ['milk'].
+n(s,uc) --> ['water'].
+n(s,uc) --> ['coffee'].
+n(s,uc) --> ['rice'].
+n(s,uc) --> ['grass'].
+n(p,ac) --> ['apples'].
+n(p,ac) --> ['eggs'].
+n(p,ac) --> ['adults'].
+n(p,nac) --> ['boys'].
+n(p,nac) --> ['girls'].
+n(p,nac) --> ['men'].
+n(p,nac) --> ['women'].
+n(p,nac) --> ['sandwiches'].
+n(p,nac) --> ['books'].
+n(p,nac) --> ['pens'].
+n(p,nac) --> ['children'].
+n(p,nac) --> ['bicycles'].
+n(p,nac) --> ['balls'].
+n(p,nac) --> ['bicycles'].
+n(p,nac) --> ['cars'].
+n(p,nac) --> ['cats'].
+n(p,nac) --> ['fish'].
+n(p,nac) --> ['police', 'officers'].
+n(p,nac) --> ['students'].
+n(p,nac) --> ['flowers'].
+
+prpart --> ['drinking'].
+prpart --> ['eating'].
+prpart --> ['reading'].
+prpart --> ['running'].
+prpart --> ['cooking'].
+prpart --> ['swimming'].
+prpart --> ['writing'].
+prpart --> ['driving'].
+prpart --> ['walking'].
+prpart --> ['sleeping'].
+
+adj --> color.
+adj --> color, ['and'], color.
+adj --> ['big'].
+adj --> ['small'].
+
+color --> ['white'].
+color --> ['black'].
+color --> ['blue'].
+color --> ['green'].
+color --> ['red'].
+color --> ['yellow'].

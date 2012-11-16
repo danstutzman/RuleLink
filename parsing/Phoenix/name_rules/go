@@ -1,0 +1,2 @@
+#!/bin/sh
+cat in | ./name_rules.rb

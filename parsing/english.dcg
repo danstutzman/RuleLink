@@ -1,0 +1,237 @@
+﻿start --> ['"'], start2, ['"'].
+
+start2 --> interj, ['.'].
+start2 --> np(N,P).
+start2 --> s.
+start2 --> s, s.
+start2 --> interj, ['.'], s.
+start2 --> adj.
+start2 --> digit(N).
+start2 --> digit(N), comma_digit.
+
+comma_digit --> [','], digit(N).
+comma_digit --> [','], digit(N), comma_digit.
+
+interj --> ['hello'].
+interj --> ['goodbye'].
+interj --> ['no'].
+interj --> ['yes'].
+
+s --> np(N,P), vp(N,P,ns,T), ['.'].
+s --> this(N), vp(N,3,ns,t), ['.'].
+s --> ['what'], be(N,3,ind), this(N), ['?'].
+s --> be(N,P,ind), np(N,P), vp(N,P,b,T), ['?'].
+%s --> be(N,P,ind), np(N,P), np(N2,P2), ['?'].
+s --> ['what'], be(N,P,ind), np(N,P), vp(N,P,b,i), ['?'].
+s --> ['what'], do(N,P,ind), np(N,P), vp(N,P,d,i), ['?'].
+s --> ['there'], be(N,3,ind), np(N,3), ['.'].
+s --> ['how', 'many'], n(p,C), ['are', 'there', '?'].
+s --> ['how', 'many'], n(p,C), ['are'], vp(p,3,b,t), ['?'].
+s --> ['how', 'many'], n(p,C), do(N,P,ind), np(N,P), vp(N,P,d,i), ['?'].
+s --> ['who'], be(N,3,ind), vp(N,3,b,i), ['?'].
+s --> ['who'], be(N,3,ind), vp(N,3,b,t), ['?'].
+s --> ['who'], vp(N,3,ns,T), ['?'].
+%s --> be(N,P,ind), np(N,P), adj, ['?'].
+s --> do(N,P,ind), np(N,P), vp(N,3,d,T), ['?'].
+
+vp(N,P,ns,t) --> v(N,P,ind), np(N2,P2).
+vp(N,P,ns,i) --> be(N,P,ind), prpart.
+vp(N,P,ns,t) --> be(N,P,ind), prpart, np(N2,P2).
+vp(N,P,ns,i) --> be(N,P,ind), ['not'], prpart.
+vp(N,P,ns,t) --> be(N,P,ind), ['not'], prpart, np(N2,P2).
+vp(N,P,ns,t) --> have(N,P,ind), np(N2,P2).
+vp(N,P,ns,t) --> do(N,P,ind), ['not'], have(N,P,bar), np(N2,P2).
+vp(N,P,ns,t) --> be(N,P,ind), ['not'], adj.
+vp(N,P,ns,t) --> be(N,P,ind), adj.
+vp(N,P,ns,t) --> be(N,P,ind), np(N,P2).
+vp(N,P,ns,t) --> be(N,P,ind), ['not'], np(N,P2).
+vp(N,P,b,i) --> prpart.
+vp(N,P,b,t) --> prpart, np(N2,P2).
+vp(N,P,b,i) --> ['not'], prpart.
+vp(N,P,b,t) --> ['not'], prpart, np(N2,P2).
+vp(N,P,b,t) --> ['not'], adj.
+vp(N,P,b,t) --> adj.
+vp(N,P,b,t) --> np(N,P2).
+vp(N,P,b,t) --> ['not'], np(N,P2).
+vp(N,P,d,i) --> have(N,P,bar).
+vp(N,P,d,t) --> have(N,P,bar), np(N2,P2).
+vp(N,P,d,t) --> ['not'], have(N,P,bar), np(N2,P2).
+
+v(N,P) --> have(N,P,ind).
+
+this(s) --> ['this'].
+this(p) --> ['these'].
+
+have(s,3,ind) --> ['has'].
+have(p,3,ind) --> ['have'].
+have(N,1,ind) --> ['have'].
+have(N,2,ind) --> ['have'].
+have(N,P,bar) --> ['have'].
+
+do(s,3,ind) --> ['does'].
+do(p,3,ind) --> ['do'].
+do(N,2,ind) --> ['do'].
+do(N,1,ind) --> ['do'].
+
+be(s,3,ind) --> ['is'].
+be(p,3,ind) --> ['are'].
+be(s,1,ind) --> ['am'].
+be(p,1,ind) --> ['are'].
+be(N,2,ind) --> ['are'].
+
+np(N,3) --> d(N,C), n(N,C).
+np(s,3) --> n(s,uc).
+np(p,3) --> n(p,C).
+np(p,3) --> np(s,3), ['and'], np(s,3).
+np(s,3) --> d(s,nac), adj, n(s,nac).
+np(p,3) --> adj, n(p,C).
+np(N,3) --> digit(N), n(N,C).
+
+np(s,1) --> ['i'].
+np(N,2) --> ['you'].
+np(s,3) --> ['he'].
+np(s,3) --> ['she'].
+np(s,3) --> ['it'].
+np(p,1) --> ['we'].
+np(p,3) --> ['they'].
+
+d(s,nac) --> ['a'].
+d(s,ac) --> ['an'].
+d(N,C) --> ['the'].
+
+n(s,ac) --> ['apple'].
+n(s,ac) --> ['egg'].
+n(s,ac) --> ['adult'].
+n(s,nac) --> ['boy'].
+n(s,nac) --> ['girl'].
+n(s,nac) --> ['man'].
+n(s,nac) --> ['woman'].
+n(s,nac) --> ['sandwich'].
+n(s,nac) --> ['cat'].
+n(s,nac) --> ['dog'].
+n(s,nac) --> ['horse'].
+n(s,nac) --> ['book'].
+n(s,nac) --> ['car'].
+n(s,nac) --> ['newspaper'].
+n(s,nac) --> ['pen'].
+n(s,nac) --> ['bicycle'].
+n(s,nac) --> ['fish'].
+n(s,nac) --> ['child'].
+n(s,nac) --> ['ball'].
+n(s,nac) --> ['flower'].
+n(s,nac) --> ['moon'].
+n(s,nac) --> ['sky'].
+n(s,nac) --> ['sun'].
+n(s,nac) --> ['doctor'].
+n(s,nac) --> ['police', 'officer'].
+n(s,nac) --> ['student'].
+n(s,nac) --> ['teacher'].
+n(s,nac) --> ['cell', 'phone'].
+n(s,nac) --> ['bed'].
+n(s,nac) --> ['cup'].
+n(s,nac) --> ['table'].
+n(s,nac) --> ['shirt'].
+n(s,nac) --> ['coat'].
+n(s,nac) --> ['dress'].
+n(s,nac) --> ['t-shirt'].
+n(s,nac) --> ['skirt'].
+n(s,nac) --> ['phone'].
+n(s,nac) --> ['hat'].
+n(s,nac) --> ['bowl'].
+n(s,nac) --> ['plate'].
+n(s,nac) --> ['tree'].
+n(s,uc) --> ['bread'].
+n(s,uc) --> ['milk'].
+n(s,uc) --> ['water'].
+n(s,uc) --> ['coffee'].
+n(s,uc) --> ['rice'].
+n(s,uc) --> ['grass'].
+n(p,ac) --> ['apples'].
+n(p,ac) --> ['eggs'].
+n(p,ac) --> ['adults'].
+n(p,nac) --> ['boys'].
+n(p,nac) --> ['girls'].
+n(p,nac) --> ['men'].
+n(p,nac) --> ['women'].
+n(p,nac) --> ['sandwiches'].
+n(p,nac) --> ['books'].
+n(p,nac) --> ['pens'].
+n(p,nac) --> ['children'].
+n(p,nac) --> ['bicycles'].
+n(p,nac) --> ['balls'].
+n(p,nac) --> ['cars'].
+n(p,nac) --> ['cats'].
+n(p,nac) --> ['fish'].
+n(p,nac) --> ['police', 'officers'].
+n(p,nac) --> ['flowers'].
+n(p,nac) --> ['doctors'].
+n(p,nac) --> ['teachers'].
+n(p,nac) --> ['newspapers'].
+n(p,nac) --> ['dogs'].
+n(p,nac) --> ['beds'].
+n(p,nac) --> ['phones'].
+n(p,nac) --> ['chairs'].
+n(p,nac) --> ['cups'].
+n(p,nac) --> ['keys'].
+n(p,nac) --> ['cell', 'phones'].
+n(p,nac) --> ['tables'].
+n(p,nac) --> ['students'].
+n(p,nac) --> ['plates'].
+n(p,nac) --> ['bowls'].
+n(p,nac) --> ['shoes'].
+n(p,nac) --> ['hats'].
+n(p,nac) --> ['t-shirts'].
+n(p,nac) --> ['trees'].
+n(p,uc) --> ['pants'].
+
+prpart --> ['drinking'].
+prpart --> ['eating'].
+prpart --> ['reading'].
+prpart --> ['running'].
+prpart --> ['cooking'].
+prpart --> ['swimming'].
+prpart --> ['writing'].
+prpart --> ['driving'].
+prpart --> ['walking'].
+prpart --> ['sleeping'].
+prpart --> ['doing'].
+prpart --> ['wearing'].
+prpart --> ['buying'].
+
+adj --> color.
+adj --> color, ['and'], color.
+adj --> ['big'].
+adj --> ['small'].
+
+color --> ['white'].
+color --> ['black'].
+color --> ['blue'].
+color --> ['green'].
+color --> ['red'].
+color --> ['yellow'].
+
+digit(s) --> ['one'].
+digit(p) --> ['two'].
+digit(p) --> ['three'].
+digit(p) --> ['four'].
+digit(p) --> ['five'].
+digit(p) --> ['six'].
+
+% Added for translation from Spanish
+%vp(N,P) --> be(N,P,ind), ['wearing'], n(p,C).
+%vp(N,P) --> be(N,P,ind), ['wearing', 'a'], n(s,nac).
+%vp(N,P) --> be(N,P,ind), ['wearing', 'an'], n(s,ac).
+%vp(N,P) --> be(N,P,ind), ['not', 'wearing'], n(p,C).
+%vp(N,P) --> be(N,P,ind), ['not', 'wearing', 'a'], n(s,nac).
+%vp(N,P) --> be(N,P,ind), ['not', 'wearing', 'an'], n(s,ac).
+%vp(N,P) --> be(N,P,ind), n(p,C).
+%vp(N,P) --> be(N,P,ind), ['a'], n(s,nac).
+%vp(N,P) --> be(N,P,ind), ['an'], n(s,ac).
+%vp(N,P) --> be(N,P,ind), ['not'], n(p,C).
+%vp(N,P) --> be(N,P,ind), ['not', 'a'], n(s,nac).
+%vp(N,P) --> be(N,P,ind), ['not', 'an'], n(s,ac).
+%vp(N,P) --> do(N,P,ind), ['not'], have(p,3,ind), np(N2,P2).
+%s --> ['how', 'many'], n(p,C), do(N,P,ind), np(N,P), have(p,3,ind), ['?'].
+
+% never appears in Unit 1 curriculum but is necessary to translate caballos
+n(p,nac) --> ['horses'].

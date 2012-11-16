@@ -1,0 +1,3 @@
+#!/bin/sh
+cat commands | ~/pl-5.6.51/src/pl | sort | uniq > rejected_phrases
+cat rejected_phrases

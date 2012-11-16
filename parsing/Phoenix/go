@@ -1,0 +1,17 @@
+#!/bin/sh
+
+#cat rs | ./simple2gra > rs.gra
+
+cat spanish.gra | Scripts/mk_nets.perl > nets
+
+ParserLib/compile_grammar -f spanish > compilation.log 2>&1 > /dev/null
+cat compilation.log
+rm compilation.log
+
+while read line
+do
+  OUTPUT=`echo $line | sed 's/?/qmark/g' | sed 's/,/comma/g' | sed 's/t-shirt/t_shirt/g' | sed 's/!/bang/g' | sed 's/^ *\(.*\)$/" \1 "/' | ParserLib/parse_text -config config 2>&1 #| grep "No parse"`
+  if [ "$OUTPUT" != "" ]; then
+    echo "$OUTPUT: $line"
+  fi
+done < spanish.curriculum #| less

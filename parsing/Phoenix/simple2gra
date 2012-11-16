@@ -1,0 +1,36 @@
+#!/usr/bin/ruby
+
+parent2transformations = {}
+
+STDIN.each { |line|
+  if line.match("^\n")
+    next
+  elsif line.match("^#")
+    next
+  elsif match = line.match("^([A-Z0-9>-_]+): ([^#]+)( #.*)?\n")
+    parent = $1
+    transformation = $2
+    
+    transformation.gsub! /T-shirt/, 't_shirt'
+    transformation.gsub! /\?/, 'qmark'
+    transformation.gsub! /,/, 'comma'
+    transformation.gsub! /!/, 'bang'
+
+    transformation.gsub!(/\b([A-Z0-9>-_]+)\b/, "[\\1]")
+    if not parent2transformations.has_key?(parent)
+      parent2transformations[parent] = []
+    end
+    parent2transformations[parent].push transformation
+  else
+    raise "Line doesn't match regex: #{line}\n"
+  end
+}
+
+parent2transformations.each { |parent, transformations|
+  puts "[#{parent}]"
+  transformations.each { |transformation|
+    puts "\t(#{transformation})"
+  }
+  puts ";"
+  puts "\n"
+}
